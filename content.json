@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "site": {
+    "lead": {
+      "zh": "在工程与好奇心之间，种下每一个想法。",
+      "en": "Planting ideas between engineering and curiosity."
+    },
+    "description": {
+      "zh": "电气工程本科在读。这里分享个人心记、AI玩法与创意实践，也记录学习感受、学习复盘和生活游记中的片段。",
+      "en": "An electrical engineering student sharing personal notes, hands-on AI ideas and creative work, alongside study reflections, reviews and travel fragments."
+    },
+    "about": {
+      "zh": "我是一名电气工程本科生。这里不是已经完成的履历，而是一个持续生长的学习空间：从电路与代码到创作、阅读和日常，把真实的过程记录下来。",
+      "en": "I study electrical engineering. This garden is a growing learning space: honest notes from circuits and code to creativity, reading and everyday life."
+    }
+  },
+  "layout": {
+    "columns": 3
+  },
+  "items": [
+    {
+      "id": "personal",
+      "category": "personal",
+      "date": "",
+      "featured": false,
+      "placeholder": true,
+      "image": "",
+      "title": {
+        "zh": "个人心记 · 待更新",
+        "en": "Personal Notes · Coming Soon"
+      },
+      "summary": {
+        "zh": "记录自己的想法与心情，内容待补充。",
+        "en": "Thoughts and feelings; content coming soon."
+      },
+      "body": {
+        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
+        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+      }
+    },
+    {
+      "id": "ai",
+      "category": "ai",
+      "date": "",
+      "featured": false,
+      "placeholder": true,
+      "image": "",
+      "title": {
+        "zh": "AI玩法分享 · 待更新",
+        "en": "AI Playbook · Coming Soon"
+      },
+      "summary": {
+        "zh": "分享亲自试过的 AI 玩法，内容待补充。",
+        "en": "Hands-on AI experiments; content coming soon."
+      },
+      "body": {
+        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
+        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+      }
+    },
+    {
+      "id": "contact",
+      "category": "contact",
+      "date": "",
+      "featured": false,
+      "placeholder": true,
+      "image": "",
+      "title": {
+        "zh": "联系方式 · 待更新",
+        "en": "Contact · Coming Soon"
+      },
+      "summary": {
+        "zh": "邮箱或社交链接待补充。",
+        "en": "Email or social links will be added later."
+      },
+      "body": {
+        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
+        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+      }
+    },
+    {
+      "id": "creative",
+      "category": "creative",
+      "date": "",
+      "featured": true,
+      "placeholder": true,
+      "image": "",
+      "title": {
+        "zh": "创意工作坊 · 待更新",
+        "en": "Creative Studio · Coming Soon"
+      },
+      "summary": {
+        "zh": "记录创作过程与作品，内容待补充。",
+        "en": "Creative process and work; content coming soon."
+      },
+      "body": {
+        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
+        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+      }
+    },
+    {
+      "id": "study_feelings",
+      "category": "study_feelings",
+      "date": "",
+      "featured": false,
+      "placeholder": true,
+      "image": "",
+      "title": {
+        "zh": "学习感受 · 待更新",
+        "en": "Study Reflections · Coming Soon"
+      },
+      "summary": {
+        "zh": "写下学习中的困惑与收获，内容待补充。",
+        "en": "Questions and discoveries while learning; content coming soon."
+      },
+      "body": {
+        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
+        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+      }
+    },
+    {
+      "id": "study_review",
+      "category": "study_review",
+      "date": "",
+      "featured": false,
+      "placeholder": true,
+      "image": "",
+      "title": {
+        "zh": "学习复盘 · 待更新",
+        "en": "Study Review · Coming Soon"
+      },
+      "summary": {
+        "zh": "梳理目标、过程、结果与下一步，内容待补充。",
+        "en": "Goals, process, results and next steps; content coming soon."
+      },
+      "body": {
+        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
+        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+      }
+    },
+    {
+      "id": "travel",
+      "category": "travel",
+      "date": "",
+      "featured": false,
+      "placeholder": true,
+      "image": "",
+      "title": {
+        "zh": "生活游记碎片分享 · 待更新",
+        "en": "Travel & Life · Coming Soon"
+      },
+      "summary": {
+        "zh": "收集旅途和日常的小片段，内容待补充。",
+        "en": "Travel and everyday fragments; content coming soon."
+      },
+      "body": {
+        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
+        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+      }
+    }
+  ]
+}
