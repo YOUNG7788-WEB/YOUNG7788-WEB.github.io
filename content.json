@@ -12,6 +12,10 @@
     "about": {
       "zh": "我是一名电气工程本科生。这里不是已经完成的履历，而是一个持续生长的学习空间：从电路与代码到创作、阅读和日常，把真实的过程记录下来。",
       "en": "I study electrical engineering. This garden is a growing learning space: honest notes from circuits and code to creativity, reading and everyday life."
+    },
+    "contact": {
+      "zh": "联系方式待补充",
+      "en": "Contact coming soon"
     }
   },
   "layout": {
@@ -36,7 +40,8 @@
       "body": {
         "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
         "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
-      }
+      },
+      "status": "placeholder"
     },
     {
       "id": "ai",
@@ -56,7 +61,8 @@
       "body": {
         "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
         "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
-      }
+      },
+      "status": "placeholder"
     },
     {
       "id": "contact",
@@ -76,7 +82,8 @@
       "body": {
         "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
         "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
-      }
+      },
+      "status": "placeholder"
     },
     {
       "id": "creative",
@@ -96,7 +103,8 @@
       "body": {
         "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
         "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
-      }
+      },
+      "status": "placeholder"
     },
     {
       "id": "study_feelings",
@@ -116,7 +124,8 @@
       "body": {
         "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
         "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
-      }
+      },
+      "status": "placeholder"
     },
     {
       "id": "study_review",
@@ -136,7 +145,8 @@
       "body": {
         "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
         "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
-      }
+      },
+      "status": "placeholder"
     },
     {
       "id": "travel",
@@ -156,7 +166,68 @@
       "body": {
         "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
         "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
-      }
+      },
+      "status": "placeholder"
+    }
+  ],
+  "categoryImages": {
+    "personal": "assets/categories-hd/personal-notes.webp",
+    "ai": "assets/categories-hd/ai-playbook.webp",
+    "contact": "assets/categories-hd/contact.webp",
+    "creative": "assets/categories-hd/creative-studio.webp",
+    "study_feelings": "assets/categories-hd/study-reflections.webp",
+    "study_review": "assets/categories-hd/study-review.webp",
+    "travel": "assets/categories-hd/travel-life.webp"
+  },
+  "categories": [
+    {
+      "id": "personal",
+      "zh": "个人心记",
+      "en": "Personal Notes",
+      "icon": "✎",
+      "order": 0
+    },
+    {
+      "id": "ai",
+      "zh": "AI玩法分享",
+      "en": "AI Playbook",
+      "icon": "✦",
+      "order": 1
+    },
+    {
+      "id": "contact",
+      "zh": "联系方式",
+      "en": "Contact",
+      "icon": "✉",
+      "order": 2
+    },
+    {
+      "id": "creative",
+      "zh": "创意工作坊",
+      "en": "Creative Studio",
+      "icon": "◇",
+      "order": 3
+    },
+    {
+      "id": "study_feelings",
+      "zh": "学习感受",
+      "en": "Study Reflections",
+      "icon": "☼",
+      "order": 4
+    },
+    {
+      "id": "study_review",
+      "zh": "学习复盘",
+      "en": "Study Review",
+      "icon": "▣",
+      "order": 5
+    },
+    {
+      "id": "travel",
+      "zh": "生活游记碎片分享",
+      "en": "Travel & Life",
+      "icon": "⌖",
+      "order": 6
     }
   ]
 }

@@ -6,3 +6,168 @@
 
 
 .panel-empty{font-size:13px;line-height:1.6;color:#718077;padding:25px 4px}.dark .panel-empty{color:#bdd0c4}@media(max-width:1100px){.category-strip{grid-template-columns:repeat(7,155px);overflow-x:auto;padding-bottom:6px}}@media(max-width:600px){.category-strip{grid-template-columns:repeat(7,120px)}}
+
+/* V2: public site is strictly browse-only. Authoring happens on 127.0.0.1:4176 */
+#edit-open{display:none!important}
+.category-card{background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.article-body{overflow-wrap:anywhere;line-height:1.85}.article-body pre{overflow:auto;padding:14px;background:#e9f1e9;border-radius:12px}.article-body blockquote{border-left:3px solid #8bbf9d;padding-left:12px}.article-body a{color:#147253;text-decoration:underline}
+/* YDG_V2_FINAL_LAYOUT_BEGIN */
+
+/* Desktop: 4 cards in the first row, 3 wider cards below */
+.category-strip {
+  display: grid !important;
+  grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+  overflow: visible !important;
+  padding: 10px 0 26px !important;
+}
+
+.category-strip > .category-card {
+  grid-column: span 3 !important;
+  min-width: 0 !important;
+}
+
+.category-strip > .category-card:nth-child(n+5) {
+  grid-column: span 4 !important;
+}
+
+.category-card {
+  height: 190px !important;
+  border-radius: 20px !important;
+  background-size: cover !important;
+  background-position: center 64% !important;
+  background-repeat: no-repeat !important;
+  transition: transform .2s ease, box-shadow .2s ease !important;
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 25, 37, .60),
+    rgba(8, 25, 37, .02) 58%,
+    rgba(8, 25, 37, .14)
+  );
+  pointer-events: none;
+}
+
+.category-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px !important;
+  padding: 15px !important;
+}
+
+.category-content > span:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.category-content strong {
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  overflow-wrap: break-word;
+}
+
+.category-content small {
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  margin-top: 4px !important;
+}
+
+.category-icon {
+  flex: 0 0 36px;
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 20px !important;
+}
+
+.category-arrow {
+  display: block !important;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.category-card:focus-visible {
+  outline: 3px solid #b5f2c2;
+  outline-offset: 3px;
+}
+
+/* iPad and medium screens */
+@media (min-width: 701px) and (max-width: 1100px) {
+  .category-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+
+  .category-strip > .category-card,
+  .category-strip > .category-card:nth-child(n+5) {
+    grid-column: auto !important;
+  }
+
+  .category-strip > .category-card:last-child {
+    grid-column: 1 / -1 !important;
+  }
+
+  .category-card {
+    height: 180px !important;
+  }
+
+  .category-strip > .category-card:last-child {
+    height: 225px !important;
+    background-position: center 72% !important;
+  }
+}
+
+/* Phones: full-width cards */
+@media (max-width: 700px) {
+  .category-strip {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 11px !important;
+    padding: 12px 0 22px !important;
+  }
+
+  .category-strip > .category-card,
+  .category-strip > .category-card:nth-child(n+5),
+  .category-strip > .category-card:last-child {
+    grid-column: auto !important;
+  }
+
+  .category-card {
+    height: 148px !important;
+    border-radius: 16px !important;
+    background-position: center 64% !important;
+  }
+
+  .category-content {
+    padding: 13px !important;
+    gap: 11px !important;
+  }
+
+  .category-icon {
+    flex-basis: 33px;
+    width: 33px !important;
+    height: 33px !important;
+    font-size: 18px !important;
+  }
+
+  .category-content strong {
+    font-size: 15px !important;
+  }
+
+  .category-content small {
+    font-size: 10px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-card {
+    transition: none !important;
+  }
+}
+
+/* YDG_V2_FINAL_LAYOUT_END */

@@ -1,7 +1,7 @@
 (() => {
 "use strict";
 const $ = (id) => document.getElementById(id);
-const categories = [
+let categories = [
   {id:"personal", zh:"个人心记", en:"Personal Notes", icon:"✎", pos:"0%"},
   {id:"ai", zh:"AI玩法分享", en:"AI Playbook", icon:"✦", pos:"16.667%"},
   {id:"contact", zh:"联系方式", en:"Contact", icon:"✉", pos:"33.333%"},
@@ -25,7 +25,13 @@ function status(message){$("editor-status").textContent=message}
 function esc(value){return String(value == null ? "" : value).replace(/[&<>"']/g,(ch)=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]))}
 function label(value){return typeof value==="object" && value ? (value[lang] || value.zh || value.en || "") : ""}
 function cat(id){return categories.find((c)=>c.id===id) || categories[0]}
-function safeImage(value){return typeof value==="string" && /^https:\/\/[^"'<> ]+$/i.test(value) ? value : ""}
+/* YDG_FULL_V2 */
+function safeImage(value){
+ if(typeof value!=="string")return "";
+ if(/^https:\/\/[^"'<> ]+$/i.test(value))return value;
+ if(/^assets\/[a-zA-Z0-9_./-]+\.(?:png|jpg|jpeg|webp|avif)$/i.test(value) && !value.includes(".."))return value;
+ return "";
+}
 function valid(value){return !!value && value.version===1 && value.site && value.site.lead && value.site.description && value.site.about && value.layout && Array.isArray(value.items) && value.items.every((item)=>item && typeof item.id==="string" && categories.some((c)=>c.id===item.category) && item.title && item.summary && item.body)}
 function saveLocal(){safeStorageSet("ydg-content-v1",JSON.stringify(data))}
 function applyTranslation(){
@@ -36,9 +42,12 @@ function applyTranslation(){
  $("top-search").placeholder=lang==="zh"?"搜索笔记、项目或关键词…":"Search notes, projects or keywords…";
  $("collection-search").placeholder=lang==="zh"?"搜索标题或正文…":"Search titles or text…";
 }
-function cardImageStyle(item){const image=safeImage(item.image);return image ? 'background-image:url(&quot;'+esc(image)+'&quot;);background-size:cover;background-position:center' : "--pos:"+cat(item.category).pos}
+function cardImageStyle(item){
+ const image=safeImage(item.image)||safeImage(data.categoryImages&&data.categoryImages[item.category]);
+ return image?'background-image:url(&quot;'+esc(image)+'&quot;);background-size:cover;background-position:center':'';
+}
 function renderCategories(){
- $("explore").innerHTML=categories.map((c)=>'<a class="category-card" style="--pos:'+c.pos+'" href="#collection" data-category="'+c.id+'"><span class="category-content"><span class="category-icon">'+c.icon+'</span><span><strong>'+esc(c[lang])+'</strong><small>'+esc(c.en)+'</small></span><span class="category-arrow">→</span></span></a>').join("");
+ $("explore").innerHTML=categories.map((c)=>'<a class="category-card" style="--pos:'+c.pos+';background-image:linear-gradient(180deg,rgba(8,27,40,.6),rgba(8,27,40,.05) 55%,rgba(8,27,40,.44)),url(&quot;'+esc(safeImage(data.categoryImages&&data.categoryImages[c.id]))+'&quot;);background-size:cover;background-position:center" href="#collection" data-category="'+c.id+'"><span class="category-content"><span class="category-icon">'+c.icon+'</span><span><strong>'+esc(c[lang])+'</strong><small>'+esc(c.en)+'</small></span><span class="category-arrow">→</span></span></a>').join("");
  $("filter-buttons").innerHTML='<button type="button" data-filter="all" class="'+(filter==="all"?"selected":"")+'">'+copy[lang].all+'</button>'+categories.map((c)=>'<button type="button" data-filter="'+c.id+'" class="'+(filter===c.id?"selected":"")+'">'+esc(c[lang])+'</button>').join("");
  document.querySelectorAll("[data-category]").forEach((el)=>el.addEventListener("click",()=>setFilter(el.dataset.category)));
  document.querySelectorAll("[data-filter]").forEach((el)=>el.addEventListener("click",()=>setFilter(el.dataset.filter)));
@@ -64,7 +73,15 @@ function renderGrid(){
  $("empty-state").hidden=matched.length>0;
  $("empty-state").textContent=copy[lang].empty;
 }
+
+function syncCategories(){
+ if(!Array.isArray(data.categories))return;
+ const defaults=Object.fromEntries(categories.map(c=>[c.id,c]));
+ const updated=data.categories.filter(c=>c&&defaults[c.id]).sort((a,b)=>(a.order??0)-(b.order??0)).map(c=>({...defaults[c.id],zh:String(c.zh||defaults[c.id].zh),en:String(c.en||defaults[c.id].en),icon:defaults[c.id].icon}));
+ if(updated.length===7)categories=updated;
+}
 function render(){
+ syncCategories();
  applyTranslation();
  $("hero-lead").textContent=label(data.site.lead);
  $("hero-description").textContent=label(data.site.description);
@@ -72,9 +89,25 @@ function render(){
  renderCategories(); renderLatest(); renderFeatured(); renderGrid();
 }
 function setFilter(value){filter=categories.some((c)=>c.id===value)?value:"all";renderCategories();renderGrid()}
+
+function gardenMarkdown(source){
+ const out=[];let list=false,code=false;
+ const inline=(s)=>esc(s).replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,(_,caption,url)=>'<a href="'+url+'" target="_blank" rel="noopener noreferrer">'+caption+'</a>').replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>').replace(/\*([^*]+)\*/g,'<em>$1</em>').replace(/\x60([^\x60]+)\x60/g,'<code>$1</code>');
+ for(const raw of String(source||'').split(/\r?\n/)){
+  if(raw.trim().startsWith('\x60\x60\x60')){if(list){out.push('</ul>');list=false}code=!code;out.push(code?'<pre><code>':'</code></pre>');continue}
+  if(code){out.push(esc(raw)+'\n');continue}
+  if(/^\s*[-*] /.test(raw)){if(!list){out.push('<ul>');list=true}out.push('<li>'+inline(raw.replace(/^\s*[-*] /,''))+'</li>');continue}
+  if(list){out.push('</ul>');list=false}
+  if(/^### /.test(raw))out.push('<h3>'+inline(raw.slice(4))+'</h3>');
+  else if(/^##? /.test(raw))out.push('<h2>'+inline(raw.replace(/^##? /,''))+'</h2>');
+  else if(/^> /.test(raw))out.push('<blockquote>'+inline(raw.slice(2))+'</blockquote>');
+  else if(raw.trim())out.push('<p>'+inline(raw)+'</p>');
+ }
+ if(list)out.push('</ul>');if(code)out.push('</code></pre>');return out.join('');
+}
 function openArticle(id){
  const item=data.items.find((entry)=>entry.id===id); if(!item)return;
- $("article-content").innerHTML='<div class="article-cover" style="'+cardImageStyle(item)+'"></div><p class="kicker">'+esc(cat(item.category)[lang])+' · '+esc(item.date||"")+'</p><h2>'+esc(label(item.title))+'</h2><p class="article-body">'+esc(label(item.body))+'</p>';
+ $("article-content").innerHTML='<div class="article-cover" style="'+cardImageStyle(item)+'"></div><p class="kicker">'+esc(cat(item.category)[lang])+' · '+esc(item.date||"")+'</p><h2>'+esc(label(item.title))+'</h2><div class="article-body">'+gardenMarkdown(label(item.body))+'</div>';
  $("article-dialog").showModal();
 }
 function updateOhm(){
@@ -170,7 +203,7 @@ async function init(){
   const response=await fetch("content.json",{cache:"no-store"});if(!response.ok)throw new Error("HTTP "+response.status);
   const source=await response.json();if(!valid(source))throw new Error("content.json 结构不正确");
   data=source;
-  const local=safeStorageGet("ydg-content-v1");
+  const local=null;
   if(local){try{const saved=JSON.parse(local);if(valid(saved))data=saved;else if(!safeStorageGet("ydg-legacy-content-v1"))safeStorageSet("ydg-legacy-content-v1",local)}catch{if(!safeStorageGet("ydg-legacy-content-v1"))safeStorageSet("ydg-legacy-content-v1",local)}}
   $("export-legacy").hidden=!safeStorageGet("ydg-legacy-content-v1");
   bind();setTheme(safeStorageGet("ydg-theme")==="dark");updateOhm();render();
