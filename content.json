@@ -10,12 +10,12 @@
       "en": "An electrical engineering student sharing personal notes, hands-on AI ideas and creative work, alongside study reflections, reviews and travel fragments."
     },
     "about": {
-      "zh": "我是一名电气工程本科生。这里不是已经完成的履历，而是一个持续生长的学习空间：从电路与代码到创作、阅读和日常，把真实的过程记录下来。",
-      "en": "I study electrical engineering. This garden is a growing learning space: honest notes from circuits and code to creativity, reading and everyday life."
+      "zh": "我是一名电气工程本科生。这里整理学习中的问题、与 AI 一起完成的作品，以及折腾网站、电脑和服务器时留下的真实复盘。文章来自可核实的聊天与项目记录，会注明完成情况；私人数据和连接凭证不在公开站点展示。",
+      "en": "I study electrical engineering. This garden collects learning notes, projects made with AI, and lessons from building websites and maintaining computers and servers. Posts are based on verifiable records; private data and access details stay off the public site."
     },
     "contact": {
-      "zh": "联系方式待补充",
-      "en": "Contact coming soon"
+      "zh": "1809039935@qq.com",
+      "en": "1809039935@qq.com"
     }
   },
   "layout": {
@@ -23,151 +23,340 @@
   },
   "items": [
     {
-      "id": "personal",
+      "id": "garden-origin",
       "category": "personal",
-      "date": "",
+      "date": "2026-11-14",
       "featured": false,
-      "placeholder": true,
+      "placeholder": false,
       "image": "",
       "title": {
-        "zh": "个人心记 · 待更新",
-        "en": "Personal Notes · Coming Soon"
+        "zh": "为什么做这座数字花园",
+        "en": "Why this digital garden"
       },
       "summary": {
-        "zh": "记录自己的想法与心情，内容待补充。",
-        "en": "Thoughts and feelings; content coming soon."
+        "zh": "把学习、创作和日常问题放在一个能持续更新的地方。",
+        "en": "A growing place for study, making and everyday notes."
       },
       "body": {
-        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
-        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+        "zh": "这座网站从“电气工程与好奇心之间，种下每一个想法”出发。它不是完成式履历，而是把学习过程、做过的作品、遇到的故障和解决问题的方法逐步整理出来。\n\n我希望每篇文章都能回答三个问题：当时想解决什么、实际做到了哪里、还有什么没有验证。网站本身也是项目的一部分：从 GitHub Pages 上线，到手机直连测试，再到根据参考站重做视觉和收紧手机卡片布局。\n\n目前站点免费托管。我的一次手机直连测试成功，但这不能替代不同地区和运营商的长期测试。",
+        "en": "This site is a record of process rather than a finished résumé. Each post aims to separate the goal, the observed result and what remains unverified. The site itself has evolved through GitHub Pages deployment, a direct mobile access test and a visual refresh. Hosting remains free; one successful phone test is not a nationwide availability claim."
       },
-      "status": "placeholder"
+      "status": "published"
     },
     {
-      "id": "ai",
+      "id": "x-notes",
+      "category": "personal",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "从公开推文看我的日常记录",
+        "en": "Notes from my public posts"
+      },
+      "summary": {
+        "zh": "学习、跑步、音乐、电影和天空，是早期公开推文里反复出现的主题。",
+        "en": "Study, running, music and everyday scenes recur in an accessible sample of public posts."
+      },
+      "body": {
+        "zh": "我回看了 @young_zhang0401 当前可读取的一组公开原创推文。2024 年的记录里，经常出现学习后的夜晚、数学题算错后的懊恼、跑步速度变化、健身、音乐与电影，也有彩虹、晚霞、猫和回家路上的片段。\n\n这些短句更像即时记录，不适合被包装成一套固定的人生主张。它们让我看到一条连续的线索：一边认真对待学习和训练，一边也在寻找日常中值得记住的小事。我还写过希望关注的人好好照顾自己、对未来保持期待。\n\n这篇仅概括目前可读取的公开样本，不代表全部历史推文，也不公开与他人的私人互动。",
+        "en": "An accessible sample of my 2024 original posts includes study nights, running, music, films, skies and small moments at home. These are snapshots, not a fixed manifesto. This note summarizes only what I could verify from public posts."
+      },
+      "status": "published"
+    },
+    {
+      "id": "chat-map",
+      "category": "personal",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "这些聊天最后汇成了什么",
+        "en": "A map of the conversations"
+      },
+      "summary": {
+        "zh": "从题目讲解到设备维护，聊天记录逐渐变成学习方法与项目复盘。",
+        "en": "Study, making, maintenance and information checking became recurring themes."
+      },
+      "body": {
+        "zh": "回看能读取的 ChatGPT 聊天与项目记录，主题并不只有一个：电路、矩阵和微积分题目；跑步和训练的自我观察；书、电影与音乐；网站和视频创作；手机、电脑、服务器的配置与故障排查；新闻简报与信息核实。\n\n我把适合公开的部分整理进各栏目。涉及身体指标、账单、私人通信、账号安全和服务器连接凭证的内容，不作为公开文章的细节。聊天里的建议也不自动等于最终结果；只有实际验证过的步骤，才写成“完成”。",
+        "en": "Accessible conversations cover math and circuits, training, reading and music, websites and video, device and server troubleshooting, and news briefings. Public posts here keep verified outcomes separate from suggestions and omit private records and access details."
+      },
+      "status": "published"
+    },
+    {
+      "id": "ai-workflow",
       "category": "ai",
-      "date": "",
+      "date": "2026-11-14",
       "featured": false,
-      "placeholder": true,
+      "placeholder": false,
       "image": "",
       "title": {
-        "zh": "AI玩法分享 · 待更新",
-        "en": "AI Playbook · Coming Soon"
+        "zh": "我怎样和 AI 一起做项目",
+        "en": "Working with AI on real projects"
       },
       "summary": {
-        "zh": "分享亲自试过的 AI 玩法，内容待补充。",
-        "en": "Hands-on AI experiments; content coming soon."
+        "zh": "先确认目标，再做出作品，最后用真实设备和结果验收。",
+        "en": "Define the goal, make a reviewable result and test it in the real world."
       },
       "body": {
-        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
-        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+        "zh": "在我们的项目里，AI 最有用的时候不是一次给出漂亮答案，而是把想法变成可检查的步骤。做网站时，我先明确内容和风格，再检查手机上的真实显示；做视频时，核对封面、标题、字幕和发布材料；排查故障时，保留日志、区分推测与证据。\n\n同一件事要分清“代码运行了”“页面发布了”“真实用户能用”三个层次。比如网站文件返回正常，并不等于所有大陆线路都能稳定访问。这样的区分让作品更可信，也避免把未完成的工作写成成果。",
+        "en": "AI helps turn an idea into checkable steps. A running script, a published page and a usable experience are different milestones. I keep observed evidence separate from suggestions and verify outcomes on real devices where possible."
       },
-      "status": "placeholder"
+      "status": "published"
     },
     {
-      "id": "contact",
-      "category": "contact",
-      "date": "",
-      "featured": false,
-      "placeholder": true,
-      "image": "",
-      "title": {
-        "zh": "联系方式 · 待更新",
-        "en": "Contact · Coming Soon"
-      },
-      "summary": {
-        "zh": "邮箱或社交链接待补充。",
-        "en": "Email or social links will be added later."
-      },
-      "body": {
-        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
-        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
-      },
-      "status": "placeholder"
-    },
-    {
-      "id": "creative",
-      "category": "creative",
-      "date": "",
+      "id": "website-build",
+      "category": "ai",
+      "date": "2026-11-14",
       "featured": true,
-      "placeholder": true,
+      "placeholder": false,
       "image": "",
       "title": {
-        "zh": "创意工作坊 · 待更新",
-        "en": "Creative Studio · Coming Soon"
+        "zh": "个人网站：从上线到手机改版",
+        "en": "Building this website"
       },
       "summary": {
-        "zh": "记录创作过程与作品，内容待补充。",
-        "en": "Creative process and work; content coming soon."
+        "zh": "免费托管、内容结构、手机排版和直连测试的连续迭代。",
+        "en": "Free hosting, content structure, mobile layout and a direct phone test."
       },
       "body": {
-        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
-        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+        "zh": "最初的网站按个人心记、AI 玩法、创意工作坊、学习感受、学习复盘和生活片段组织内容，并使用 GitHub Pages 免费托管。手机截图暴露出栏目卡片的大块空白；检查内容数据后发现，当时各栏其实都是“待更新”，固定高度加重了空白感。\n\n后来的改版参考了喜欢的个人小站的深色、留白和柔和光感，保留原站功能，缩短手机卡片。发布后，网页和样式文件都能正常返回；我在手机关闭代理后确认了一次直连成功。这个结果只代表当时那条网络，不能当成全国可用性证明。",
+        "en": "The first version used GitHub Pages. A mobile screenshot revealed oversized empty category cards while the content was still marked as coming soon. A later refresh kept the functions, shortened the cards and changed the visual language. One direct phone test succeeded; broader mainland availability remains unverified."
       },
-      "status": "placeholder"
+      "status": "published"
     },
     {
-      "id": "study_feelings",
+      "id": "briefing-process",
+      "category": "ai",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "每天的信息简报怎样避免误报",
+        "en": "A careful briefing workflow"
+      },
+      "summary": {
+        "zh": "把日历、邮件与新闻分开核实，未确认的事项继续标为未确认。",
+        "en": "Check sources and dates, and keep unresolved items unresolved."
+      },
+      "body": {
+        "zh": "我们做过两类不同的简报：一类整理新闻与商业信息，另一类只读地检查个人日历和邮件，并按是否需要行动排序。实践中最重要的不是把消息堆满，而是标注来源、日期、是否已经处理。\n\n比如账单、试用期或安全提醒，只看到邮件并不能推断已经付款、扣费或解决；连接服务失败时，也应写明那一项没有核实。网站只记录这套信息处理方法，不公开邮件正文、收件人、金额或账户状态。",
+        "en": "We used separate workflows for news and for read-only calendar and inbox checks. The useful habit is to label evidence, date and action status. Seeing a notice is not proof that payment or resolution occurred. This post describes the method without exposing private messages."
+      },
+      "status": "published"
+    },
+    {
+      "id": "parallel-universe",
+      "category": "creative",
+      "date": "2026-11-14",
+      "featured": true,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "平行宇宙报社：报道一个不存在的世界",
+        "en": "Parallel Universe Press"
+      },
+      "summary": {
+        "zh": "从一个设问出发，做成能搜索、收藏并离线阅读的虚构报纸。",
+        "en": "A fictional newspaper with search, favorites and offline reading."
+      },
+      "body": {
+        "zh": "“让 AI 报道一个不存在的世界”逐渐发展成平行宇宙报社。我们完成并上线了“25 小时世界”一期：用新闻页面的形式呈现统一的虚构设定，并加入搜索、收藏和离线阅读。\n\n这个项目让我感兴趣的是形式与规则的关系。虚构世界需要前后一致，读者也需要清楚知道它是创作。上线之后，原站被保留下来；对于不同网络下的稳定访问，当时没有取得足够的国内节点证据，所以不写成已经全面解决。",
+        "en": "The “25-hour world” issue turned a speculative premise into a consistent fictional newspaper with search, favorites and offline reading. The original site was retained. Reliable access across mainland networks was not fully verified."
+      },
+      "status": "published"
+    },
+    {
+      "id": "night-video",
+      "category": "creative",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "追夜：五座城市的夜景视频实验",
+        "en": "After Dark: a five-city video experiment"
+      },
+      "summary": {
+        "zh": "从画面、双语字幕到封面和发布文案，走完一次视频制作流程。",
+        "en": "A bilingual night-city video and a complete publishing package."
+      },
+      "body": {
+        "zh": "“追夜”项目围绕五座城市的夜景，完成了双语视频、封面、标题和发布材料。准备发布时，我选择自己在平台上操作，项目资料则整理成可供手动发布的版本。\n\n之后我要求清除这次视频工程，成片、素材、缓存和备份都已删除。因此这里仅保留创作过程的复盘，不提供下载链接，也不声称作品仍保存在本机。这次经验让我更清楚地看到：创作除了画面，还包括素材管理、字幕核对、版权检查和最后的发布选择。",
+        "en": "The project produced a bilingual video, cover and publishing copy for five night-city scenes. I chose to publish manually. Later, the entire video project was deleted at my request, so this page documents the process and does not offer a download."
+      },
+      "status": "published"
+    },
+    {
+      "id": "creative-reading",
+      "category": "creative",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "阅读、电影与音乐留下的灵感",
+        "en": "Reading, film and music"
+      },
+      "summary": {
+        "zh": "从作品的情绪和形式出发，练习说清自己为什么被打动。",
+        "en": "Small reactions can become more thoughtful criticism."
+      },
+      "body": {
+        "zh": "平时的聊天和公开推文里，我会谈电影、小说、音乐，也会追问一个表达为何有效。关于《呼啸山庄》、电影结局、City Pop、钢琴和一些流行音乐的讨论，更多是即时感受与继续探索的入口。\n\n我希望把这些感受慢慢写成有具体场景和判断依据的文章，而不是只给出“好看”“好听”的结论。目前这篇是主题索引，不冒充已经写好的影评或乐评。",
+        "en": "Conversations and public posts touched on novels, films, piano, City Pop and pop music. I want to turn immediate reactions into writing with concrete scenes and reasons. This is a theme map, not a claim that full reviews are already published."
+      },
+      "status": "published"
+    },
+    {
+      "id": "engineering-study",
       "category": "study_feelings",
-      "date": "",
+      "date": "2026-11-14",
       "featured": false,
-      "placeholder": true,
+      "placeholder": false,
       "image": "",
       "title": {
-        "zh": "学习感受 · 待更新",
-        "en": "Study Reflections · Coming Soon"
+        "zh": "电气工程学习：从不会到会解释",
+        "en": "Learning electrical engineering"
       },
       "summary": {
-        "zh": "写下学习中的困惑与收获，内容待补充。",
-        "en": "Questions and discoveries while learning; content coming soon."
+        "zh": "电路题、控制图、矩阵和微积分，是反复练习的基础。",
+        "en": "Circuits, control diagrams and mathematics need explanations, not just answers."
       },
       "body": {
-        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
-        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+        "zh": "我在读电气工程本科。聊天中反复出现电流计算、模拟电路、控制线路、PLC 梯形图，也有矩阵、行列式、导数和积分。真正有用的不是抄出最终答案，而是知道每一步用了什么条件，错在哪里，能否换一种说法再解释一遍。\n\n做题时我会把符号、公式、图像和实际物理意义连起来。遇到卡住的题，先缩小问题：已知什么、要找什么、当前步骤为什么成立。这个栏目将继续放经过我核对的学习笔记；目前这篇先记录方法。",
+        "en": "I study electrical engineering. Our conversations repeatedly covered current calculations, control circuits, PLC logic, matrices and calculus. My working method is to identify givens, justify each step and connect formulas to physical meaning."
       },
-      "status": "placeholder"
+      "status": "published"
     },
     {
-      "id": "study_review",
+      "id": "study-rhythm",
+      "category": "study_feelings",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "学习节奏：认真，也允许休息",
+        "en": "Finding a study rhythm"
+      },
+      "summary": {
+        "zh": "公开记录里既有刷题、背单词，也有跑步、音乐和对低效率的懊恼。",
+        "en": "Study, exercise and rest are all part of the process."
+      },
+      "body": {
+        "zh": "早期公开推文记录过学车、家教、背单词、数学题和运动挤在同一天，也记录过学习效率低、算题出错或休息时的愧疚。回头看，这些片段说明学习不是一条每天都向上的直线。\n\n我想保留真实状态：做得好的时候记下方法，做不到的时候追问原因，不把一次慢跑或一晚休息当成失败。关于运动和睡眠的聊天很多，但这里不公开具体健康数据，也不把个人经验写成对所有人都适用的建议。",
+        "en": "My public posts include studying, tutoring, driving lessons, exercise and moments of frustration. They show a changing rhythm rather than a straight line of improvement. I keep personal health measurements private and treat these as reflections, not universal advice."
+      },
+      "status": "published"
+    },
+    {
+      "id": "vps-review",
       "category": "study_review",
-      "date": "",
-      "featured": false,
-      "placeholder": true,
+      "date": "2026-11-14",
+      "featured": true,
+      "placeholder": false,
       "image": "",
       "title": {
-        "zh": "学习复盘 · 待更新",
-        "en": "Study Review · Coming Soon"
+        "zh": "VPS 配置与维护：一次复盘",
+        "en": "VPS setup and maintenance"
       },
       "summary": {
-        "zh": "梳理目标、过程、结果与下一步，内容待补充。",
-        "en": "Goals, process, results and next steps; content coming soon."
+        "zh": "从服务上线、手机验证到登录保护，把“能连上”和“可长期维护”分开。",
+        "en": "A retrospective on deployment, phone tests and maintenance."
       },
       "body": {
-        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
-        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+        "zh": "我们曾配置两处 VPS，经历过更换方案、重新安装、服务启动检查、手机连接和延迟比较。手机最终能连接，是当时实际观察到的结果；一次连接成功并不能证明长期稳定。\n\n维护时，我学到要把服务状态、开机启动、登录保护、异常拦截、备份和恢复计划分别检查。也要保留未完成项，不因为业务能用就把安全加固写成全部完成。这里有意省去服务器地址、账户、端口、密钥、配置文件位置和可被用来连接设备的参数。\n\n这篇是个人项目复盘，不是可直接套用的部署教程；具体做法需按当前软件文档和所在网络环境重新核对。",
+        "en": "We configured two VPS instances, changed approaches, checked startup and tested a phone connection. A successful connection was an observation, not proof of long-term reliability. I separately track service health, access protection, backups and unfinished work. Connection details are intentionally omitted."
       },
-      "status": "placeholder"
+      "status": "published"
     },
     {
-      "id": "travel",
-      "category": "travel",
-      "date": "",
+      "id": "touchpad-review",
+      "category": "study_review",
+      "date": "2026-11-14",
       "featured": false,
-      "placeholder": true,
+      "placeholder": false,
       "image": "",
       "title": {
-        "zh": "生活游记碎片分享 · 待更新",
-        "en": "Travel & Life · Coming Soon"
+        "zh": "触控板反复失灵：先留证据，再判断原因",
+        "en": "Investigating a failing touchpad"
       },
       "summary": {
-        "zh": "收集旅途和日常的小片段，内容待补充。",
-        "en": "Travel and everyday fragments; content coming soon."
+        "zh": "设备显示正常也可能无法输入；日志与真实操作都要看。",
+        "en": "Logs and real input tests matter more than a status icon."
       },
       "body": {
-        "zh": "栏目已建立，尚未发布真实内容。可在编辑器中添加自己的文字和图片。",
-        "en": "This section is ready. No personal content has been published yet. Add your own text and images in the editor."
+        "zh": "电脑触控板曾反复失灵。排查中发现，系统状态有时显示正常，但滑动、点击和双指滚动都没有反应。进一步记录显示底层通信请求反复出现，却没有成功完成；电源复位一度恢复使用，而普通软件重置并非每次有效。\n\n这些证据更支持供电、固件或硬件链路相关问题，但不足以确定唯一故障点。固件更新也曾失败，不能把“更新包装进系统”当作“固件已成功刷写”。我们做了自动监控与恢复尝试，同时保留日志供后续核查；它是应急措施，不是已经证实的根治。",
+        "en": "The touchpad sometimes showed a healthy device status while movement, clicks and gestures failed. Logs showed repeated low-level requests without successful completion. A power reset helped once; software resets were inconsistent. The evidence narrows possibilities but does not prove one cause or a permanent fix."
       },
-      "status": "placeholder"
+      "status": "published"
+    },
+    {
+      "id": "system-maintenance",
+      "category": "study_review",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "电脑维护：先确认，再清理或修改",
+        "en": "Maintaining a Windows PC"
+      },
+      "summary": {
+        "zh": "缓存、重复文件、乱码和白屏问题都需要留出验证空间。",
+        "en": "Verify duplicates, make reversible changes and keep unresolved issues visible."
+      },
+      "body": {
+        "zh": "整理电脑时，我们核对过重复安装包、缓存与旧暂存，清掉确认无用的内容；看似重复但含有独有成果的项目则保留。处理同花顺乱码时，调整过系统编码设置；后来出现白屏，日志给出一些线索，但没有足够证据宣布已修好。\n\n这些经历让我形成一条习惯：先记录原状，再做可回退的小改动，最后用实际运行结果验收。不能读取的受保护目录、尚未确认用途的文件和未复现的故障，都应明确标为未核实。",
+        "en": "We removed confirmed caches and duplicate installers while preserving projects with unique results. An encoding change addressed garbled text, but a later white-screen issue was not conclusively fixed. The recurring lesson is to record the starting state, change cautiously and verify the real result."
+      },
+      "status": "published"
+    },
+    {
+      "id": "network-life",
+      "category": "travel",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "手机、平板与电脑之间的日常",
+        "en": "Across phone, tablet and PC"
+      },
+      "summary": {
+        "zh": "跨设备访问和网络直连测试，也是生活里的小实验。",
+        "en": "Everyday cross-device use is part of the garden."
+      },
+      "body": {
+        "zh": "我在手机、平板和 Windows 电脑之间切换工作。曾为远程控制调整网络与供电设置，也用手机在关闭代理后检查个人网站能否直接打开。这些体验提醒我：电脑上的页面正常，不代表手机上的布局和加载就一定正常。\n\n这个栏目目前记录的是生活中的数字工具与观察。可核实的聊天记录里没有足够完整的旅途素材可写成游记，因此不会编造旅行经历；之后有真实照片、地点与故事时再补充。",
+        "en": "I move between a phone, tablet and Windows PC. Testing this site on a phone exposed layout issues that desktop checks missed. This section currently holds everyday digital-life observations; I have not invented travel stories where verified material is unavailable."
+      },
+      "status": "published"
+    },
+    {
+      "id": "contact-me",
+      "category": "contact",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "联系我",
+        "en": "Contact"
+      },
+      "summary": {
+        "zh": "欢迎通过邮箱交流学习、作品和网站反馈。",
+        "en": "Email me about study, projects or website feedback."
+      },
+      "body": {
+        "zh": "联系邮箱：1809039935@qq.com\n\n欢迎交流电气工程学习、AI 创作、个人网站和项目复盘。如果你发现网站在某个网络下打不开，邮件中可以写明使用的地区、运营商、时间和现象；请不要发送账号密码、验证码或私人连接配置。",
+        "en": "Email: 1809039935@qq.com\n\nYou can reach out about electrical engineering, AI projects or the site. For access issues, include the region, carrier, time and symptom, but do not send credentials."
+      },
+      "status": "published"
     }
   ],
   "categoryImages": {
