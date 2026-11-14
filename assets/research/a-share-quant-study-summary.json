@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "published_at": "2026-11-14",
+  "title": "A股量化研究摘要",
+  "scope": "公开数据研究与虚拟组合，不包含真实账户或持仓。",
+  "experiment_date": "2026-11-06",
+  "source_records": [
+    "2026-11-02-Bplus-研究结论.md",
+    "parameter_study_20261106/策略大白话说明.md",
+    "parameter_study_20261106/研究结果说明.md",
+    "parameter_study_20261106/followup_diagnostics_20261106/复核与推进建议.md"
+  ],
+  "initial_virtual_capital_cny": 100000,
+  "returns_are": "每个区间独立开始的整段总收益，非年化，非实盘",
+  "parameter_study": [
+    {
+      "period": "2015-05-04/2018-12-28",
+      "scenario": "standard",
+      "baseline": {
+        "total_return_pct": -15.6434,
+        "max_drawdown_pct": -23.2216
+      },
+      "atr": {
+        "total_return_pct": -10.7673,
+        "max_drawdown_pct": -17.5814
+      },
+      "risk_adjusted_momentum": {
+        "total_return_pct": -10.337,
+        "max_drawdown_pct": -20.252
+      }
+    },
+    {
+      "period": "2019-01-02/2022-12-30",
+      "scenario": "standard",
+      "baseline": {
+        "total_return_pct": -7.2844,
+        "max_drawdown_pct": -12.4161
+      },
+      "atr": {
+        "total_return_pct": -1.1067,
+        "max_drawdown_pct": -8.7832
+      },
+      "risk_adjusted_momentum": {
+        "total_return_pct": -7.8262,
+        "max_drawdown_pct": -17.2536
+      }
+    },
+    {
+      "period": "2023-01-03/2026-10-27",
+      "scenario": "standard",
+      "baseline": {
+        "total_return_pct": -3.6927,
+        "max_drawdown_pct": -11.1869
+      },
+      "atr": {
+        "total_return_pct": -4.3054,
+        "max_drawdown_pct": -11.3578
+      },
+      "risk_adjusted_momentum": {
+        "total_return_pct": 5.5033,
+        "max_drawdown_pct": -9.1943
+      }
+    },
+    {
+      "period": "2023-01-03/2026-10-27",
+      "scenario": "highcost",
+      "baseline": {
+        "total_return_pct": -3.7753,
+        "max_drawdown_pct": -10.8418
+      },
+      "atr": {
+        "total_return_pct": -5.3436,
+        "max_drawdown_pct": -11.3234
+      },
+      "risk_adjusted_momentum": {
+        "total_return_pct": 1.8935,
+        "max_drawdown_pct": -9.4207
+      }
+    }
+  ],
+  "research_screen": {
+    "atr": "未通过",
+    "risk_adjusted_momentum": "仅通过进一步研究筛查，非执行批准"
+  },
+  "limitations": [
+    "历史样本已被观察，不是真正独立样本外。",
+    "年度财报与行业快照不能完整重建历史可得性。",
+    "历史ST/退市、证券资格、公司行为和成交量单位仍有缺口。",
+    "复权成交代理价不能证明真实可成交。",
+    "各版本仓位路径不同，不证明等风险超额收益。",
+    "暂停后20个完整交易日获批准恢复是历史比较假设。",
+    "区块重采样差异估计跨零，不是未来盈利概率。"
+  ],
+  "execution_permitted": false
+}
