@@ -2,15 +2,15 @@
   "version": 1,
   "site": {
     "lead": {
-      "zh": "在工程与好奇心之间，种下每一个想法。",
+      "zh": "一个从电梯工程走到电气本科，又爱折腾网站和服务器的人。",
       "en": "Planting ideas between engineering and curiosity."
     },
     "description": {
-      "zh": "电气工程本科在读。这里分享个人心记、AI玩法与创意实践，也记录学习感受、学习复盘和生活游记中的片段。",
+      "zh": "这儿有我做过的东西、算错的题、修过的电脑，以及一些跑步、电影和 F1 的碎碎念。",
       "en": "An electrical engineering student sharing personal notes, hands-on AI ideas and creative work, alongside study reflections, reviews and travel fragments."
     },
     "about": {
-      "zh": "我是一名电气工程本科生。这里整理学习中的问题、与 AI 一起完成的作品，以及折腾网站、电脑和服务器时留下的真实复盘。文章来自可核实的聊天与项目记录，会注明完成情况；私人数据和连接凭证不在公开站点展示。",
+      "zh": "我在满洲里俄语职业学院读过电梯工程技术，后来专升本，现在在呼伦贝尔学院读电气工程及其自动化。这个网站放我真实做过、想过和还没想明白的事。",
       "en": "I study electrical engineering. This garden collects learning notes, projects made with AI, and lessons from building websites and maintaining computers and servers. Posts are based on verifiable records; private data and access details stay off the public site."
     },
     "contact": {
@@ -30,15 +30,15 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "为什么做这座数字花园",
+        "zh": "我为什么弄这个小站",
         "en": "Why this digital garden"
       },
       "summary": {
-        "zh": "把学习、创作和日常问题放在一个能持续更新的地方。",
+        "zh": "我学的是电气工程及其自动化，但如果只用“工科生”三个字介绍自己，好像也太省事了。我的电脑里有电路题、半成品网页、视频工程、服务器笔记，手机里还有一些跑完步随手发的碎碎念。东西越攒越多，我想给它们找个能长期放着、",
         "en": "A growing place for study, making and everyday notes."
       },
       "body": {
-        "zh": "这座网站从“电气工程与好奇心之间，种下每一个想法”出发。它不是完成式履历，而是把学习过程、做过的作品、遇到的故障和解决问题的方法逐步整理出来。\n\n我希望每篇文章都能回答三个问题：当时想解决什么、实际做到了哪里、还有什么没有验证。网站本身也是项目的一部分：从 GitHub Pages 上线，到手机直连测试，再到根据参考站重做视觉和收紧手机卡片布局。\n\n目前站点免费托管。我的一次手机直连测试成功，但这不能替代不同地区和运营商的长期测试。",
+        "zh": "我学的是电气工程及其自动化，但如果只用“工科生”三个字介绍自己，好像也太省事了。我的电脑里有电路题、半成品网页、视频工程、服务器笔记，手机里还有一些跑完步随手发的碎碎念。东西越攒越多，我想给它们找个能长期放着、还能慢慢长大的地方，于是有了这座“数字花园”。\n\n它不是简历，也不准备假装我什么都会。有些东西我确实做成了，有些只做到一半，还有些折腾了好久，最后发现问题根本不在我以为的地方。把这些过程写下来，比只摆一个漂亮成品更有意思。至少下次再踩坑，我可以翻回来看看自己上次是怎么从坑里爬出来的。\n\n这个网站本身就是第一篇作业：先用 GitHub Pages 免费上线，再拿手机关掉代理实测。第一次截图里，卡片一大片空白，我还以为是网络没加载完；后来发现栏目里本来就没文章，固定高度把“没内容”放大成了“坏了”。这次把文章认真补上，页面也跟着重新排。手机能直连是我亲自测到的一次结果，不代表全国每条线路都一样稳。",
         "en": "This site is a record of process rather than a finished résumé. Each post aims to separate the goal, the observed result and what remains unverified. The site itself has evolved through GitHub Pages deployment, a direct mobile access test and a visual refresh. Hosting remains free; one successful phone test is not a nationwide availability claim."
       },
       "status": "published"
@@ -51,163 +51,58 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "从公开推文看我的日常记录",
+        "zh": "翻旧推文，像翻一部乱序日记",
         "en": "Notes from my public posts"
       },
       "summary": {
-        "zh": "学习、跑步、音乐、电影和天空，是早期公开推文里反复出现的主题。",
+        "zh": "我在 X 上发过不少“今天也就这样吧”的瞬间。晚上八点半的天空、结束学习后的夜、跑步越来越慢的抱怨、彩虹、猫、City Pop，还有算分部积分算错两次后的崩溃。单看每条都很短，连起来倒有点像乱序日记：一边想把学",
         "en": "Study, running, music and everyday scenes recur in an accessible sample of public posts."
       },
       "body": {
-        "zh": "我回看了 @young_zhang0401 当前可读取的一组公开原创推文。2024 年的记录里，经常出现学习后的夜晚、数学题算错后的懊恼、跑步速度变化、健身、音乐与电影，也有彩虹、晚霞、猫和回家路上的片段。\n\n这些短句更像即时记录，不适合被包装成一套固定的人生主张。它们让我看到一条连续的线索：一边认真对待学习和训练，一边也在寻找日常中值得记住的小事。我还写过希望关注的人好好照顾自己、对未来保持期待。\n\n这篇仅概括目前可读取的公开样本，不代表全部历史推文，也不公开与他人的私人互动。",
+        "zh": "我在 X 上发过不少“今天也就这样吧”的瞬间。晚上八点半的天空、结束学习后的夜、跑步越来越慢的抱怨、彩虹、猫、City Pop，还有算分部积分算错两次后的崩溃。单看每条都很短，连起来倒有点像乱序日记：一边想把学习和运动都抓住，一边也会被一首歌、一部电影或者一片天空拽住。\n\n有一阵我把学车、家教、背单词、刷题和运动塞进同一天，忙得要命，没学够又会有罪恶感。现在回头看，没必要把那时的每句牢骚都上升成“人生哲学”。我就是累了，会吐槽，也会第二天继续。比起把自己写成永远自律的人，我更愿意承认：我也经常算错题、跑不动，偶尔就是想喝口无糖百事，看看天。\n\n我还写过，希望关注的人好好爱自己，对未来留一点期待。这句现在看也不觉得矫情。生活里有烦恼，不等于只剩烦恼。这里引用的是目前能读到的一部分公开原创推文；回复别人、删除的内容和读不到的旧帖，不拿来替我“总结人格”。",
         "en": "An accessible sample of my 2024 original posts includes study nights, running, music, films, skies and small moments at home. These are snapshots, not a fixed manifesto. This note summarizes only what I could verify from public posts."
       },
       "status": "published"
     },
     {
-      "id": "chat-map",
+      "id": "my-path",
       "category": "personal",
       "date": "2026-11-14",
       "featured": false,
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "这些聊天最后汇成了什么",
-        "en": "A map of the conversations"
+        "zh": "从电梯专业一路走到现在",
+        "en": "从电梯专业一路走到现在"
       },
       "summary": {
-        "zh": "从题目讲解到设备维护，聊天记录逐渐变成学习方法与项目复盘。",
-        "en": "Study, making, maintenance and information checking became recurring themes."
+        "zh": "我在满洲里俄语职业学院读过电梯工程技术，后来专升本，现在在呼伦贝尔学院读电气工程及其自动化。说起来只有一句话，走的时候可不是直线：专业课要补，数学要捡，未来到底往哪边走也得边学边想。",
+        "en": ""
       },
       "body": {
-        "zh": "回看能读取的 ChatGPT 聊天与项目记录，主题并不只有一个：电路、矩阵和微积分题目；跑步和训练的自我观察；书、电影与音乐；网站和视频创作；手机、电脑、服务器的配置与故障排查；新闻简报与信息核实。\n\n我把适合公开的部分整理进各栏目。涉及身体指标、账单、私人通信、账号安全和服务器连接凭证的内容，不作为公开文章的细节。聊天里的建议也不自动等于最终结果；只有实际验证过的步骤，才写成“完成”。",
-        "en": "Accessible conversations cover math and circuits, training, reading and music, websites and video, device and server troubleshooting, and news briefings. Public posts here keep verified outcomes separate from suggestions and omit private records and access details."
+        "zh": "我在满洲里俄语职业学院读过电梯工程技术，后来专升本，现在在呼伦贝尔学院读电气工程及其自动化。说起来只有一句话，走的时候可不是直线：专业课要补，数学要捡，未来到底往哪边走也得边学边想。\n\n电梯、电气、PLC 这些词在外人看来挺像，真学起来每个都有自己的硬骨头。我也不是已经毕业的工程师，更不想把“正在学”包装成“精通”。做这座网站，就是想让后来的人看到一个普通工科生的真实进度：一道题是怎么想通的，一个软件是怎么装上的，一个项目又是怎么卡住、改掉、终于跑起来的。",
+        "en": ""
       },
       "status": "published"
     },
     {
-      "id": "ai-workflow",
-      "category": "ai",
+      "id": "night-talk",
+      "category": "personal",
       "date": "2026-11-14",
       "featured": false,
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "我怎样和 AI 一起做项目",
-        "en": "Working with AI on real projects"
+        "zh": "聊了一晚上钱和未来，最后发现最该管的是我的注意力",
+        "en": "聊了一晚上钱和未来，最后发现最该管的是我的注意力"
       },
       "summary": {
-        "zh": "先确认目标，再做出作品，最后用真实设备和结果验收。",
-        "en": "Define the goal, make a reviewable result and test it in the real world."
+        "zh": "昨天晚上和一位 teacher 聊了很久，从 BTC 聊到 A 股、美股，又一路聊到工作、买房和结婚。起初我还以为会听到什么财富密码，结果他先给我泼了盆冷水：别碰杠杆，也别老想着靠比特币一夜翻身。他很担心量子计",
+        "en": ""
       },
       "body": {
-        "zh": "在我们的项目里，AI 最有用的时候不是一次给出漂亮答案，而是把想法变成可检查的步骤。做网站时，我先明确内容和风格，再检查手机上的真实显示；做视频时，核对封面、标题、字幕和发布材料；排查故障时，保留日志、区分推测与证据。\n\n同一件事要分清“代码运行了”“页面发布了”“真实用户能用”三个层次。比如网站文件返回正常，并不等于所有大陆线路都能稳定访问。这样的区分让作品更可信，也避免把未完成的工作写成成果。",
-        "en": "AI helps turn an idea into checkable steps. A running script, a published page and a usable experience are different milestones. I keep observed evidence separate from suggestions and verify outcomes on real devices where possible."
-      },
-      "status": "published"
-    },
-    {
-      "id": "website-build",
-      "category": "ai",
-      "date": "2026-11-14",
-      "featured": true,
-      "placeholder": false,
-      "image": "",
-      "title": {
-        "zh": "个人网站：从上线到手机改版",
-        "en": "Building this website"
-      },
-      "summary": {
-        "zh": "免费托管、内容结构、手机排版和直连测试的连续迭代。",
-        "en": "Free hosting, content structure, mobile layout and a direct phone test."
-      },
-      "body": {
-        "zh": "最初的网站按个人心记、AI 玩法、创意工作坊、学习感受、学习复盘和生活片段组织内容，并使用 GitHub Pages 免费托管。手机截图暴露出栏目卡片的大块空白；检查内容数据后发现，当时各栏其实都是“待更新”，固定高度加重了空白感。\n\n后来的改版参考了喜欢的个人小站的深色、留白和柔和光感，保留原站功能，缩短手机卡片。发布后，网页和样式文件都能正常返回；我在手机关闭代理后确认了一次直连成功。这个结果只代表当时那条网络，不能当成全国可用性证明。",
-        "en": "The first version used GitHub Pages. A mobile screenshot revealed oversized empty category cards while the content was still marked as coming soon. A later refresh kept the functions, shortened the cards and changed the visual language. One direct phone test succeeded; broader mainland availability remains unverified."
-      },
-      "status": "published"
-    },
-    {
-      "id": "briefing-process",
-      "category": "ai",
-      "date": "2026-11-14",
-      "featured": false,
-      "placeholder": false,
-      "image": "",
-      "title": {
-        "zh": "每天的信息简报怎样避免误报",
-        "en": "A careful briefing workflow"
-      },
-      "summary": {
-        "zh": "把日历、邮件与新闻分开核实，未确认的事项继续标为未确认。",
-        "en": "Check sources and dates, and keep unresolved items unresolved."
-      },
-      "body": {
-        "zh": "我们做过两类不同的简报：一类整理新闻与商业信息，另一类只读地检查个人日历和邮件，并按是否需要行动排序。实践中最重要的不是把消息堆满，而是标注来源、日期、是否已经处理。\n\n比如账单、试用期或安全提醒，只看到邮件并不能推断已经付款、扣费或解决；连接服务失败时，也应写明那一项没有核实。网站只记录这套信息处理方法，不公开邮件正文、收件人、金额或账户状态。",
-        "en": "We used separate workflows for news and for read-only calendar and inbox checks. The useful habit is to label evidence, date and action status. Seeing a notice is not proof that payment or resolution occurred. This post describes the method without exposing private messages."
-      },
-      "status": "published"
-    },
-    {
-      "id": "parallel-universe",
-      "category": "creative",
-      "date": "2026-11-14",
-      "featured": true,
-      "placeholder": false,
-      "image": "",
-      "title": {
-        "zh": "平行宇宙报社：报道一个不存在的世界",
-        "en": "Parallel Universe Press"
-      },
-      "summary": {
-        "zh": "从一个设问出发，做成能搜索、收藏并离线阅读的虚构报纸。",
-        "en": "A fictional newspaper with search, favorites and offline reading."
-      },
-      "body": {
-        "zh": "“让 AI 报道一个不存在的世界”逐渐发展成平行宇宙报社。我们完成并上线了“25 小时世界”一期：用新闻页面的形式呈现统一的虚构设定，并加入搜索、收藏和离线阅读。\n\n这个项目让我感兴趣的是形式与规则的关系。虚构世界需要前后一致，读者也需要清楚知道它是创作。上线之后，原站被保留下来；对于不同网络下的稳定访问，当时没有取得足够的国内节点证据，所以不写成已经全面解决。",
-        "en": "The “25-hour world” issue turned a speculative premise into a consistent fictional newspaper with search, favorites and offline reading. The original site was retained. Reliable access across mainland networks was not fully verified."
-      },
-      "status": "published"
-    },
-    {
-      "id": "night-video",
-      "category": "creative",
-      "date": "2026-11-14",
-      "featured": false,
-      "placeholder": false,
-      "image": "",
-      "title": {
-        "zh": "追夜：五座城市的夜景视频实验",
-        "en": "After Dark: a five-city video experiment"
-      },
-      "summary": {
-        "zh": "从画面、双语字幕到封面和发布文案，走完一次视频制作流程。",
-        "en": "A bilingual night-city video and a complete publishing package."
-      },
-      "body": {
-        "zh": "“追夜”项目围绕五座城市的夜景，完成了双语视频、封面、标题和发布材料。准备发布时，我选择自己在平台上操作，项目资料则整理成可供手动发布的版本。\n\n之后我要求清除这次视频工程，成片、素材、缓存和备份都已删除。因此这里仅保留创作过程的复盘，不提供下载链接，也不声称作品仍保存在本机。这次经验让我更清楚地看到：创作除了画面，还包括素材管理、字幕核对、版权检查和最后的发布选择。",
-        "en": "The project produced a bilingual video, cover and publishing copy for five night-city scenes. I chose to publish manually. Later, the entire video project was deleted at my request, so this page documents the process and does not offer a download."
-      },
-      "status": "published"
-    },
-    {
-      "id": "creative-reading",
-      "category": "creative",
-      "date": "2026-11-14",
-      "featured": false,
-      "placeholder": false,
-      "image": "",
-      "title": {
-        "zh": "阅读、电影与音乐留下的灵感",
-        "en": "Reading, film and music"
-      },
-      "summary": {
-        "zh": "从作品的情绪和形式出发，练习说清自己为什么被打动。",
-        "en": "Small reactions can become more thoughtful criticism."
-      },
-      "body": {
-        "zh": "平时的聊天和公开推文里，我会谈电影、小说、音乐，也会追问一个表达为何有效。关于《呼啸山庄》、电影结局、City Pop、钢琴和一些流行音乐的讨论，更多是即时感受与继续探索的入口。\n\n我希望把这些感受慢慢写成有具体场景和判断依据的文章，而不是只给出“好看”“好听”的结论。目前这篇是主题索引，不冒充已经写好的影评或乐评。",
-        "en": "Conversations and public posts touched on novels, films, piano, City Pop and pop music. I want to turn immediate reactions into writing with concrete scenes and reasons. This is a theme map, not a claim that full reviews are already published."
+        "zh": "昨天晚上和一位 teacher 聊了很久，从 BTC 聊到 A 股、美股，又一路聊到工作、买房和结婚。起初我还以为会听到什么财富密码，结果他先给我泼了盆冷水：别碰杠杆，也别老想着靠比特币一夜翻身。他很担心量子计算将来对比特币的影响。这个判断到底会不会发生，我现在没有本事拍板；但“想一夜暴富，往往先一夜暴负”这句，我倒是越想越觉得扎心。认知以外的钱，真不一定轮得到我挣😅。\n\n他建议我先攒钱，再考虑长期投资美股。听到“先攒够 30 万”我差点笑出声：老师，您这门课的前置条件是不是有点高？话又说回来，他讲的也不是完全没道理——先有本金、别借钱豪赌，这总比被市场一天的涨跌牵着鼻子走靠谱。至于具体买什么、什么时候买，我不打算把一场夜聊当成投资方案。\n\n话题后来拐到了工作。他说起身边名校毕业、在大厂干了十几年也会被裁的人，也说起在机器人企业忙到脚不沾地的同学。劝我“老老实实工作”时，我脑子里却在想：所谓稳定到底能稳多久？当然，别人讲的个案不能代表所有行业，我也不会因为几段故事就断言“什么工作都没前途”。只是对一个还在读书、还要自己攒第一桶金的人来说，房、车、婚姻这些大决定背后的成本真的很重。别人看着轻松跨过去的坎，我可能得先站在原地算半天账。\n\n我以前也看过“30 岁前先别急着买房买车结婚”那套说法。现在的我会认同其中一部分：别因为到了某个年龄，就自动签下一堆自己还没想清楚的长期承诺。但也没必要把别人的人生策略奉为标准答案。婚姻不是一张股票，工作也不是一张保本理财；每个人承担风险的能力和想要的生活都不一样。\n\n聊到最后，我最想改的居然不是投资组合，而是自己的注意力。最近新闻、X 和行情几乎把我脑子占满了：本来想学会儿量化，手一滑又去刷新市场；本来想看书，三分钟后已经在评论区。研究市场当然可以，但如果连自己的时间都管不住，谈什么长期学习和积累？先把手机放远一点，把课学明白，继续运动，再慢慢研究 AI 和交易。所谓“版本答案”先别喊太早，我现在最需要做的，可能就是老老实实把今天该做的事做完😂。",
+        "en": ""
       },
       "status": "published"
     },
@@ -219,15 +114,15 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "电气工程学习：从不会到会解释",
+        "zh": "数学题算错两次之后",
         "en": "Learning electrical engineering"
       },
       "summary": {
-        "zh": "电路题、控制图、矩阵和微积分，是反复练习的基础。",
+        "zh": "我以前发推吐槽过：一个小小的分部积分，居然算错两次。那种感觉很熟悉——明明知道公式，写到纸上还是能把符号、上下限或者中间一步弄丢。矩阵、行列式也一样，听别人讲的时候“嗯嗯我会了”，自己落笔又卡住。",
         "en": "Circuits, control diagrams and mathematics need explanations, not just answers."
       },
       "body": {
-        "zh": "我在读电气工程本科。聊天中反复出现电流计算、模拟电路、控制线路、PLC 梯形图，也有矩阵、行列式、导数和积分。真正有用的不是抄出最终答案，而是知道每一步用了什么条件，错在哪里，能否换一种说法再解释一遍。\n\n做题时我会把符号、公式、图像和实际物理意义连起来。遇到卡住的题，先缩小问题：已知什么、要找什么、当前步骤为什么成立。这个栏目将继续放经过我核对的学习笔记；目前这篇先记录方法。",
+        "zh": "我以前发推吐槽过：一个小小的分部积分，居然算错两次。那种感觉很熟悉——明明知道公式，写到纸上还是能把符号、上下限或者中间一步弄丢。矩阵、行列式也一样，听别人讲的时候“嗯嗯我会了”，自己落笔又卡住。\n\n后来我给自己换了个要求：先别急着要答案，把“这一步为什么能这么变”说出来。做电路题也是，电流从哪来，方向怎么定，公式和图上的元件是不是对得上。如果只能对着标准答案点头，我下一题大概率还会摔一跤。\n\n这个栏目以后会放我真正做过、复核过的笔记。错题也会留着，毕竟它们比“我又学会了一个知识点”更诚实。",
         "en": "I study electrical engineering. Our conversations repeatedly covered current calculations, control circuits, PLC logic, matrices and calculus. My working method is to identify givens, justify each step and connect formulas to physical meaning."
       },
       "status": "published"
@@ -240,15 +135,15 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "学习节奏：认真，也允许休息",
+        "zh": "课本、跑鞋和休息之间",
         "en": "Finding a study rhythm"
       },
       "summary": {
-        "zh": "公开记录里既有刷题、背单词，也有跑步、音乐和对低效率的懊恼。",
+        "zh": "我在推文里一会儿喊“跑完滚去图书馆”，一会儿又嫌自己跑得慢；有时学完还想刷会儿 X，刷完又怪 X 耽误学习。现在看还挺好笑，但当时确实会焦虑：今天的题没做完，是不是休息都没资格？",
         "en": "Study, exercise and rest are all part of the process."
       },
       "body": {
-        "zh": "早期公开推文记录过学车、家教、背单词、数学题和运动挤在同一天，也记录过学习效率低、算题出错或休息时的愧疚。回头看，这些片段说明学习不是一条每天都向上的直线。\n\n我想保留真实状态：做得好的时候记下方法，做不到的时候追问原因，不把一次慢跑或一晚休息当成失败。关于运动和睡眠的聊天很多，但这里不公开具体健康数据，也不把个人经验写成对所有人都适用的建议。",
+        "zh": "我在推文里一会儿喊“跑完滚去图书馆”，一会儿又嫌自己跑得慢；有时学完还想刷会儿 X，刷完又怪 X 耽误学习。现在看还挺好笑，但当时确实会焦虑：今天的题没做完，是不是休息都没资格？\n\n我不想把这个栏目写成自律打卡。学习、运动和睡觉都不是互相扣分的项目。状态好的时候多做一点，状态差的时候先把原因弄清楚；真要复盘，也看一段时间的变化，不拿某一天的配速或学习时长给自己判刑。\n\n我聊过很多运动和睡眠数据，那些具体数字还是留给我自己。这里记的是感受和方法，不是给别人开训练处方。",
         "en": "My public posts include studying, tutoring, driving lessons, exercise and moments of frustration. They show a changing rhythm rather than a straight line of improvement. I keep personal health measurements private and treat these as reflections, not universal advice."
       },
       "status": "published"
@@ -261,15 +156,15 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "VPS 配置与维护：一次复盘",
+        "zh": "我从零折腾两台 VPS：买机器容易，养机器才是正片",
         "en": "VPS setup and maintenance"
       },
       "summary": {
-        "zh": "从服务上线、手机验证到登录保护，把“能连上”和“可长期维护”分开。",
+        "zh": "最开始我对 VPS 的理解很朴素：买一台云服务器，装上系统，服务跑起来，手机能连，就算完成。真的折腾一圈才发现，“能连”是第一关，线路、维护、备份和账单，每一关都能让我重新打开 PowerShell。",
         "en": "A retrospective on deployment, phone tests and maintenance."
       },
       "body": {
-        "zh": "我们曾配置两处 VPS，经历过更换方案、重新安装、服务启动检查、手机连接和延迟比较。手机最终能连接，是当时实际观察到的结果；一次连接成功并不能证明长期稳定。\n\n维护时，我学到要把服务状态、开机启动、登录保护、异常拦截、备份和恢复计划分别检查。也要保留未完成项，不因为业务能用就把安全加固写成全部完成。这里有意省去服务器地址、账户、端口、密钥、配置文件位置和可被用来连接设备的参数。\n\n这篇是个人项目复盘，不是可直接套用的部署教程；具体做法需按当前软件文档和所在网络环境重新核对。",
+        "zh": "最开始我对 VPS 的理解很朴素：买一台云服务器，装上系统，服务跑起来，手机能连，就算完成。真的折腾一圈才发现，“能连”是第一关，线路、维护、备份和账单，每一关都能让我重新打开 PowerShell。\n\n**第一步：买的到底是什么。** 我在 Evoxt 买的是平台提供的虚拟机，不是先买一台物理服务器再自己装虚拟机。订单记录能核对到：2026 年 9 月 27 日先订购美国加州 VM-1，后来在 10 月 14 日订购马来西亚优质线路 VM-0.75。两笔都是按月付费，也都选了自动每周备份。官网下单时，流程是选地区和套餐、核对计费周期及可选项、完成支付，然后等订单确认、付款确认和“机器已部署”邮件。**订单邮件到了不等于机器已经能用**，我会等部署通知，再去控制台看状态。具体价格会随时间变化，文章不拿旧账单当报价表。\n\n**第二步：拿到虚拟机，先别急着往里塞东西。** 控制台给出系统、地址和初始登录信息。我先确认虚拟机是 Running，再看系统版本、能否连接、磁盘和内存是否正常。美国那台最初收到的是 Ubuntu 24.04，后来有过重装和方案调整；马来西亚的部署通知显示 Ubuntu 26.04。重装会清掉系统盘上的旧配置，所以每次动手前得弄清什么要备份，什么可以丢。\n\n**第三步：在 Windows 用 PowerShell 连上去。** 我不是在电脑里装了个“Linux 虚拟机”，而是从 Windows 终端远程登录云上的虚拟机。最基础的入口是 `ssh 用户名@服务器地址`。第一次连接要核对主机指纹；看到密码或密钥口令提示时，输入内容不会显示在屏幕上，这是正常的。连接成功后，我会先看系统信息、服务状态和网络，而不是一上来执行一大段来路不明的脚本。需要把文件从服务器取回本机，用的是 `scp`；需要核对下载文件是否一致，可以在 PowerShell 里用 `Get-FileHash`。这些命令在文章里会配“这一步看什么结果、失败了先查什么”的说明，不放真实地址和密钥。\n\n**第四步：部署服务。** 早期试过不同方案，后来两台机器都围绕 sing-box 做过配置。实际操作并不是“复制教程，回车，完事”：要核对安装来源、检查配置格式、确认服务启动、设开机自启，再从手机端导入独立的连接信息进行测试。服务端显示 active，只能证明进程在跑；手机能不能连、实际应用顺不顺，必须另测。官方安装方式和服务管理命令会以发布当天的官方文档为准，不把聊天里旧脚本原样粘到网站。\n\n**第五步：手机实测，别只盯一个延迟数字。** 我测过马来西亚和美国节点，手机上看到的延迟大致是前者 100 多毫秒、后者 200 多毫秒。这个数字能说明当时的响应情况，不能直接等于下载速度，更不能代表晚高峰长期表现。后来我也比较过其他线路，发现服务器配置高不一定更快，跨境路由的影响很大。我的结论很朴素：先用真实场景测，再决定要不要继续花钱折腾。\n\n**第六步：维护。** 服务能用以后还要看开机启动、系统更新、失败登录拦截、密钥登录、备份和到期提醒。这里尤其要老实：历史记录显示有些安全加固并未在当时全部完成，不能因为“手机连上了”就写成“服务器已经万无一失”。账单也是，收到续费提醒并不等于已付款。我会定期核对控制台、服务状态和实际连接；遇到超时先分清是机器停了、服务没起来，还是线路本身慢。PowerShell 只是操作台，真正有效的是每一步都有检查结果和回退办法。\n\n这篇会附一张**脱敏流程图**和一份**通用命令对照表**：`ssh` 负责连接，`scp` 负责传文件，`Get-FileHash` 核对文件；Linux 端的服务状态与日志命令负责确认服务是否正常。真实 IP、密码、二维码、连接参数、订单号和账单不会公开。这样别人能看懂我怎么走过来，也不会顺手拿到我家的钥匙。\n\n**VPS 长文附页：从零到手机连通的操作顺序。** 这部分会作为文章里的折叠步骤卡，而不是把命令一股脑砸在正文中。它区分“我当时确实做过的事”和“供读者复现的通用示例”：\n\n1. **选择与购买。** 在服务商控制台注册账号，选地区、套餐、系统、计费周期和备份选项。付款前核对总价与续费周期。我的订单先后选了美国加州 VM-1、马来西亚优质线路 VM-0.75，均为月付并选择每周自动备份。付款后分别核对订单确认、付款确认、虚拟机部署完成三种状态。\n2. **首次开机。** 打开控制台，看机器是否 Running、系统版本是否与订单一致；保存初始登录信息到安全位置，别贴进聊天、截图和公开文章。若要重装系统，先确认系统盘数据是否要备份，重装后重新核对登录信息和服务。\n3. **PowerShell 首次连接。** 在 Windows 终端用 `ssh <user>@<server-address>` 连接，核对首次出现的主机指纹，输入控制台给出的凭证。`ssh` 超时先查机器状态、网络和防火墙；认证失败先检查用户名与凭证，不反复盲试。\n4. **系统初检。** 登录后核对发行版、磁盘、内存、时间、网络与安全更新；再安装服务。每一步先记当前状态，操作失败能回到前一步。\n5. **服务安装与配置。** 按 [sing-box 官方包管理器文档](https://sing-box.sagernet.org/installation/package-manager/)加入官方软件源并安装；给每台服务器生成独立配置和凭证，不复制一台机器的连接密钥到另一台。先用 `sing-box check` 验证配置，再启动服务；用 `systemctl status sing-box` 与 `journalctl -u sing-box` 看启动结果和日志。具体配置字段随版本变化，发布时按官方文档复核。\n6. **手机端验收。** 通过安全方式把各自的连接信息导入手机客户端，分别测试是否连接、网页和视频是否正常、晚高峰是否稳定。延迟只记录为“当时手机测到的值”，不冒充全国测速或长期带宽。\n7. **维护与回退。** 核对开机自启、失败登录拦截、密钥登录、系统更新、备份是否真的可恢复，以及账单到期时间。更改配置前留备份；服务异常时先看状态和日志，再看线路，不直接重装。未完成的安全加固会如实标注。\n\nPowerShell 小抄会配在步骤旁：\n\n```powershell\nssh <user>@<server-address>              # 连接虚拟机；地址在自己的控制台查看\nscp <user>@<server-address>:<remote-file> <local-folder>  # 取回非敏感日志或备份\nGet-FileHash <local-file> -Algorithm SHA256              # 核对本机下载文件\n```\n\n这些是**脱敏示例**，尖括号内必须替换为本人值；不包含实际服务器地址或连接配置。文中会说明：PowerShell 是本机操作入口，Linux 服务是在云上的虚拟机里运行。",
         "en": "We configured two VPS instances, changed approaches, checked startup and tested a phone connection. A successful connection was an observation, not proof of long-term reliability. I separately track service health, access protection, backups and unfinished work. Connection details are intentionally omitted."
       },
       "status": "published"
@@ -282,15 +177,15 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "触控板反复失灵：先留证据，再判断原因",
+        "zh": "触控板坏了，又好了，又坏了",
         "en": "Investigating a failing touchpad"
       },
       "summary": {
-        "zh": "设备显示正常也可能无法输入；日志与真实操作都要看。",
+        "zh": "这台电脑的触控板很会演：系统有时说设备“正常”，我手指在上面滑，光标却一动不动；点击和双指滚动也罢工。我一开始也想找个“一键修好”的办法，后来发现光看设备管理器的状态根本不够，还得看真实输入和底层记录。",
         "en": "Logs and real input tests matter more than a status icon."
       },
       "body": {
-        "zh": "电脑触控板曾反复失灵。排查中发现，系统状态有时显示正常，但滑动、点击和双指滚动都没有反应。进一步记录显示底层通信请求反复出现，却没有成功完成；电源复位一度恢复使用，而普通软件重置并非每次有效。\n\n这些证据更支持供电、固件或硬件链路相关问题，但不足以确定唯一故障点。固件更新也曾失败，不能把“更新包装进系统”当作“固件已成功刷写”。我们做了自动监控与恢复尝试，同时保留日志供后续核查；它是应急措施，不是已经证实的根治。",
+        "zh": "这台电脑的触控板很会演：系统有时说设备“正常”，我手指在上面滑，光标却一动不动；点击和双指滚动也罢工。我一开始也想找个“一键修好”的办法，后来发现光看设备管理器的状态根本不够，还得看真实输入和底层记录。\n\n我们抓过故障时的通信日志：读取请求不断出现，但没有成功完成的记录。普通的软件重置不是每次有效，电源复位曾让它恢复；触控板固件更新还出现过失败，Windows 显示“更新包安装成功”也不能说明固件已经刷进去。现在最有依据的是供电、固件或硬件链路相关的问题，但具体哪一处坏了，证据还不够。\n\n我做了自动监控和恢复尝试，作用是记录异常、在可恢复时帮我省一步手工操作。它不是“根治神器”；下一次真的再坏，日志才是继续找原因的线索。还没完成的 BIOS／固件核查，也不会被我写成“已经修好”。",
         "en": "The touchpad sometimes showed a healthy device status while movement, clicks and gestures failed. Logs showed repeated low-level requests without successful completion. A power reset helped once; software resets were inconsistent. The evidence narrows possibilities but does not prove one cause or a permanent fix."
       },
       "status": "published"
@@ -303,16 +198,142 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "电脑维护：先确认，再清理或修改",
+        "zh": "清理电脑：名字一样，不代表文件一样",
         "en": "Maintaining a Windows PC"
       },
       "summary": {
-        "zh": "缓存、重复文件、乱码和白屏问题都需要留出验证空间。",
+        "zh": "清 C 盘那次，我最怕两件事：该删的没删，不该删的删了。扫描后确实有缓存、旧安装暂存和经校验重复的文件；但几个看起来像副本的研究工程，里面有各自独有的结果，不能图省事一锅端。",
         "en": "Verify duplicates, make reversible changes and keep unresolved issues visible."
       },
       "body": {
-        "zh": "整理电脑时，我们核对过重复安装包、缓存与旧暂存，清掉确认无用的内容；看似重复但含有独有成果的项目则保留。处理同花顺乱码时，调整过系统编码设置；后来出现白屏，日志给出一些线索，但没有足够证据宣布已修好。\n\n这些经历让我形成一条习惯：先记录原状，再做可回退的小改动，最后用实际运行结果验收。不能读取的受保护目录、尚未确认用途的文件和未复现的故障，都应明确标为未核实。",
+        "zh": "清 C 盘那次，我最怕两件事：该删的没删，不该删的删了。扫描后确实有缓存、旧安装暂存和经校验重复的文件；但几个看起来像副本的研究工程，里面有各自独有的结果，不能图省事一锅端。\n\n最后清理的是能确认的东西，保留的是用途不明或内容不同的东西。受保护目录当时也没有被完整读到，所以我不会写“全盘都检查完了”。这件事听起来不刺激，但比“一键清理出几十 GB”靠谱：先比内容，再看占用，动手之后复查可用空间和还在用的项目。",
         "en": "We removed confirmed caches and duplicate installers while preserving projects with unique results. An encoding change addressed garbled text, but a later white-screen issue was not conclusively fixed. The recurring lesson is to record the starting state, change cautiously and verify the real result."
+      },
+      "status": "published"
+    },
+    {
+      "id": "ai-workflow",
+      "category": "ai",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "AI 对我最有用的地方：把想法真的做出来",
+        "en": "Working with AI on real projects"
+      },
+      "summary": {
+        "zh": "我当然喜欢问 AI 问题，但最上头的不是它说得多漂亮，而是我说“想做个网站”，最后真有网址能打开；说“做个平行宇宙报社”，最后真有一期能搜、能收藏的报纸。过程里它也会说错、会把没验证的东西讲得像已经完成，这时候",
+        "en": "Define the goal, make a reviewable result and test it in the real world."
+      },
+      "body": {
+        "zh": "我当然喜欢问 AI 问题，但最上头的不是它说得多漂亮，而是我说“想做个网站”，最后真有网址能打开；说“做个平行宇宙报社”，最后真有一期能搜、能收藏的报纸。过程里它也会说错、会把没验证的东西讲得像已经完成，这时候就得把它拽回现实：链接呢？文件呢？手机打开了吗？\n\n我给自己定的规矩是，项目至少过三关：东西做出来、关键功能自己试过、别人能在真实设备上用。AI 是一起干活的工具，不是替我宣布胜利的主持人。这个栏目会写实际使用过程和失败记录，不发“十个神仙提示词”那种看完就忘的清单。",
+        "en": "AI helps turn an idea into checkable steps. A running script, a published page and a usable experience are different milestones. I keep observed evidence separate from suggestions and verify outcomes on real devices where possible."
+      },
+      "status": "published"
+    },
+    {
+      "id": "website-build",
+      "category": "ai",
+      "date": "2026-11-14",
+      "featured": true,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "我的网站为什么改了又改",
+        "en": "Building this website"
+      },
+      "summary": {
+        "zh": "最早我把网站分成七个栏目，却忘了栏目里还没有真实文章。手机打开时，两个卡片光秃秃地站在那儿，底部进度条还没走完，我第一反应是：完了，国内网是不是又卡了？检查后才发现，页面主体其实已经出来了，空白主要是内容和固定",
+        "en": "Free hosting, content structure, mobile layout and a direct phone test."
+      },
+      "body": {
+        "zh": "最早我把网站分成七个栏目，却忘了栏目里还没有真实文章。手机打开时，两个卡片光秃秃地站在那儿，底部进度条还没走完，我第一反应是：完了，国内网是不是又卡了？检查后才发现，页面主体其实已经出来了，空白主要是内容和固定高度的组合问题。\n\n后来我参考一个喜欢的小站，把配色改成深色，卡片压紧，留白给标题和正文。GitHub Pages 还是免费托管；我自己用手机关掉代理试过一次，能直连。至于不同省份、不同运营商是不是都稳，没有大陆节点的持续测试就不装懂。这个网站会继续改，但每次改完，我都要拿手机看一眼，不能只在电脑上自我感觉良好。",
+        "en": "The first version used GitHub Pages. A mobile screenshot revealed oversized empty category cards while the content was still marked as coming soon. A later refresh kept the functions, shortened the cards and changed the visual language. One direct phone test succeeded; broader mainland availability remains unverified."
+      },
+      "status": "published"
+    },
+    {
+      "id": "briefing-process",
+      "category": "ai",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "每日简报：别把“看到提醒”写成“事情解决了”",
+        "en": "A careful briefing workflow"
+      },
+      "summary": {
+        "zh": "我做过新闻与商业信息的简报，也做过只读检查日历和收件箱的个人简报。做多了才发现，最容易出错的不是漏掉一条新闻，而是把状态说满：收到续费邮件，不代表已经扣款；日历查不到，不代表今天一定没安排；某个邮箱连不上，就得",
+        "en": "Check sources and dates, and keep unresolved items unresolved."
+      },
+      "body": {
+        "zh": "我做过新闻与商业信息的简报，也做过只读检查日历和收件箱的个人简报。做多了才发现，最容易出错的不是漏掉一条新闻，而是把状态说满：收到续费邮件，不代表已经扣款；日历查不到，不代表今天一定没安排；某个邮箱连不上，就得老实写“没查到”。\n\n我希望简报帮我少忘事，而不是制造一种“所有事情都被 AI 管好了”的幻觉。来源、时间、我需要做什么，这三样比花哨排版更重要。私人邮件和账单不会搬到网站上，网站只讲这套核对方法。",
+        "en": "We used separate workflows for news and for read-only calendar and inbox checks. The useful habit is to label evidence, date and action status. Seeing a notice is not proof that payment or resolution occurred. This post describes the method without exposing private messages."
+      },
+      "status": "published"
+    },
+    {
+      "id": "parallel-universe",
+      "category": "creative",
+      "date": "2026-11-14",
+      "featured": true,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "平行宇宙报社：给不存在的世界排一期报",
+        "en": "Parallel Universe Press"
+      },
+      "summary": {
+        "zh": "起点是一个很好玩的设问：如果 AI 给一个不存在的世界写新闻，会发生什么？后来它变成了“平行宇宙报社”的《25 小时世界》一期。光有奇怪设定不够，我还想让它看起来真的像一份报纸：标题、栏目、搜索、收藏和离线阅读",
+        "en": "A fictional newspaper with search, favorites and offline reading."
+      },
+      "body": {
+        "zh": "起点是一个很好玩的设问：如果 AI 给一个不存在的世界写新闻，会发生什么？后来它变成了“平行宇宙报社”的《25 小时世界》一期。光有奇怪设定不够，我还想让它看起来真的像一份报纸：标题、栏目、搜索、收藏和离线阅读都得能用。\n\n最难的不是写一句“这个世界一天有 25 小时”，而是让每条新闻都遵守这个世界的规则。写着写着如果自己先忘了设定，读者一定更出戏。这个项目已经上线过，原站也保留下来了。跨地区访问是否稳定，当时没有足够的国内节点实测，所以我把它当作创作和产品实验，不把网络问题一笔带过。",
+        "en": "The “25-hour world” issue turned a speculative premise into a consistent fictional newspaper with search, favorites and offline reading. The original site was retained. Reliable access across mainland networks was not fully verified."
+      },
+      "status": "published"
+    },
+    {
+      "id": "night-video",
+      "category": "creative",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "追夜：五座城市亮灯之后",
+        "en": "After Dark: a five-city video experiment"
+      },
+      "summary": {
+        "zh": "我做过一支五座城市夜景的视频，从画面、双语字幕到封面、标题和平台发布文案，前后改了好几版。真正准备发布时，我选择自己来按上传按钮，资料则提前整理好。做视频的乐趣当然是画面，但后来我更能理解：字幕、素材来源、版权",
+        "en": "A bilingual night-city video and a complete publishing package."
+      },
+      "body": {
+        "zh": "我做过一支五座城市夜景的视频，从画面、双语字幕到封面、标题和平台发布文案，前后改了好几版。真正准备发布时，我选择自己来按上传按钮，资料则提前整理好。做视频的乐趣当然是画面，但后来我更能理解：字幕、素材来源、版权检查、封面和文件版本，都决定一支片子能不能稳稳落地。\n\n再后来，我让电脑把这个视频项目的成片、素材、缓存和备份都清掉了。不是“还藏着一个下载链接”，就是删了。因此这里写的是这次制作的过程，不放一个已经不存在的作品入口。平行宇宙报社则按我的要求保留了，这两个项目不能混为一谈。",
+        "en": "The project produced a bilingual video, cover and publishing copy for five night-city scenes. I chose to publish manually. Later, the entire video project was deleted at my request, so this page documents the process and does not offer a download."
+      },
+      "status": "published"
+    },
+    {
+      "id": "creative-reading",
+      "category": "creative",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "看电影、听歌，顺手记一点感受",
+        "en": "Reading, film and music"
+      },
+      "summary": {
+        "zh": "我会因为电影的结局觉得遗憾，也会因为一段钢琴或者 City Pop 觉得脑子终于安静下来。公开推文和聊天里谈过电影、小说、流行音乐，但我不打算把每次“好听死了”硬扩写成一篇权威乐评。",
+        "en": "Small reactions can become more thoughtful criticism."
+      },
+      "body": {
+        "zh": "我会因为电影的结局觉得遗憾，也会因为一段钢琴或者 City Pop 觉得脑子终于安静下来。公开推文和聊天里谈过电影、小说、流行音乐，但我不打算把每次“好听死了”硬扩写成一篇权威乐评。\n\n这个栏目留给具体的感受：哪一幕让我停住，哪一段旋律让我反复听，后来想法有没有变。等我真写出完整影评或乐评，再把它们一篇篇挂上来。现在先把入口搭好，不拿 AI 编的观后感充数。",
+        "en": "Conversations and public posts touched on novels, films, piano, City Pop and pop music. I want to turn immediate reactions into writing with concrete scenes and reasons. This is a theme map, not a claim that full reviews are already published."
       },
       "status": "published"
     },
@@ -324,16 +345,37 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "手机、平板与电脑之间的日常",
+        "zh": "三块屏幕和一张跑步路线",
         "en": "Across phone, tablet and PC"
       },
       "summary": {
-        "zh": "跨设备访问和网络直连测试，也是生活里的小实验。",
+        "zh": "我的日常经常在电脑、手机和平板之间切。电脑上做网站，手机上试能不能打开；服务器在云上，PowerShell 在本机，真正的体验却得看手机。设备一多，就很容易出现“电脑上没问题，手机怎么又不对了”的经典场面。",
         "en": "Everyday cross-device use is part of the garden."
       },
       "body": {
-        "zh": "我在手机、平板和 Windows 电脑之间切换工作。曾为远程控制调整网络与供电设置，也用手机在关闭代理后检查个人网站能否直接打开。这些体验提醒我：电脑上的页面正常，不代表手机上的布局和加载就一定正常。\n\n这个栏目目前记录的是生活中的数字工具与观察。可核实的聊天记录里没有足够完整的旅途素材可写成游记，因此不会编造旅行经历；之后有真实照片、地点与故事时再补充。",
+        "zh": "我的日常经常在电脑、手机和平板之间切。电脑上做网站，手机上试能不能打开；服务器在云上，PowerShell 在本机，真正的体验却得看手机。设备一多，就很容易出现“电脑上没问题，手机怎么又不对了”的经典场面。\n\n屏幕之外我也跑步、听歌、看天。推文里那些彩虹、夜空、回家路上的疲惫，比精心剪辑的“充实一天”更像真实生活。这个栏目以后可以慢慢放游记；眼下能核对的完整旅行素材不够，我不会凭空写一趟不存在的旅行。",
         "en": "I move between a phone, tablet and Windows PC. Testing this site on a phone exposed layout issues that desktop checks missed. This section currently holds everyday digital-life observations; I have not invented travel stories where verified material is unavailable."
+      },
+      "status": "published"
+    },
+    {
+      "id": "f1-business",
+      "category": "travel",
+      "date": "2026-11-14",
+      "featured": false,
+      "placeholder": false,
+      "image": "",
+      "title": {
+        "zh": "F1 这么会赚钱，赛车本身还在 C 位吗？",
+        "en": "F1 这么会赚钱，赛车本身还在 C 位吗？"
+      },
+      "summary": {
+        "zh": "新加坡站结束后，我又想起今年看上海站时冒出来的一个问题：F1 到底在卖什么？我看了很多年比赛，当然喜欢赛车、喜欢那种一圈之内什么都可能发生的紧张感。但再往围场外看，高价门票、明星到场、品牌活动、直播版权和周边，",
+        "en": ""
+      },
+      "body": {
+        "zh": "新加坡站结束后，我又想起今年看上海站时冒出来的一个问题：F1 到底在卖什么？我看了很多年比赛，当然喜欢赛车、喜欢那种一圈之内什么都可能发生的紧张感。但再往围场外看，高价门票、明星到场、品牌活动、直播版权和周边，整个生意早就不只是一台车跑得有多快。\n\n明星来赛场，我不会隔着屏幕替他们判断“真爱不爱赛车”。能看出来的是，这些人自带粉丝，赛事也能借他们把话题推到更大的圈子里。粉丝可能先冲着偶像来，后来真看上比赛；也可能拍完照就走。对运营方来说，两种人先买票、看直播、参与讨论，流量就已经开始工作了。我作为车迷会有点别扭：最贵、最显眼的位置，未必留给最懂赛车的人。但我也知道，光靠老车迷，未必撑得起今天这个体量。\n\n赛车确实是个烧钱项目。研发、车队人员、设备跨洲运输、办赛、转播，每一环都要钱。我的看法是，F1 越来越会把比赛包装成全球娱乐产品，让品牌、城市和新观众一起分担成本、分享曝光。说“它以前快撑不下去，所以才大众化”太绝对了；这更像我的一种推测，不能当作查证过的商业史。2026 赛季的车队名单里，奥迪和凯迪拉克都已出现；它们各自看中技术、品牌还是市场，不能只凭我的观感替企业下结论。能确定的是，F1 已经成了车企愿意投入的大舞台。[FIA 2026 车队资料](https://www.fia.com/sites/default/files/media_guide_2026_english.pdf)\n\n我还想起同在上海赛车场发生的 China GT 赛车起火事件，以及网上关于现场安保报酬很低的讨论。那些具体金额和责任链条，我目前没有拿到足够的一手资料，不会在文章里直接指认谁“吞了钱”。但问题值得追问：赛事把排场和流量做大时，救援训练、装备、现场人员待遇有没有同步跟上？如果只有台前越来越亮、台后越来越省，这个生意再热闹，我也没法只看热闹。\n\n所以我的结论不是“商业化毁了 F1”。恰好相反，商业化让更多人走进来，也让比赛有了资源。只是作为车迷，我希望别把赛车和真正守住安全底线的人，挤成整个流量机器的背景板。",
+        "en": ""
       },
       "status": "published"
     },
@@ -345,28 +387,28 @@
       "placeholder": false,
       "image": "",
       "title": {
-        "zh": "联系我",
+        "zh": "邮箱",
         "en": "Contact"
       },
       "summary": {
-        "zh": "欢迎通过邮箱交流学习、作品和网站反馈。",
+        "zh": "想聊电气、学习、网站、AI 项目，或者发现哪个页面在手机上又闹脾气了，可以给我发邮件：1809039935@qq.com。",
         "en": "Email me about study, projects or website feedback."
       },
       "body": {
-        "zh": "联系邮箱：1809039935@qq.com\n\n欢迎交流电气工程学习、AI 创作、个人网站和项目复盘。如果你发现网站在某个网络下打不开，邮件中可以写明使用的地区、运营商、时间和现象；请不要发送账号密码、验证码或私人连接配置。",
+        "zh": "想聊电气、学习、网站、AI 项目，或者发现哪个页面在手机上又闹脾气了，可以给我发邮件：**1809039935@qq.com**。\n\n如果是网站访问问题，告诉我你在哪个地区、用哪家运营商、大概什么时间、页面卡在哪一步，就比一句“打不开”有用得多。密码、验证码和服务器连接信息就别往邮件里放了，咱们都省点心。",
         "en": "Email: 1809039935@qq.com\n\nYou can reach out about electrical engineering, AI projects or the site. For access issues, include the region, carrier, time and symptom, but do not send credentials."
       },
       "status": "published"
     }
   ],
   "categoryImages": {
-    "personal": "assets/categories-hd/personal-notes.webp",
-    "ai": "assets/categories-hd/ai-playbook.webp",
-    "contact": "assets/categories-hd/contact.webp",
-    "creative": "assets/categories-hd/creative-studio.webp",
-    "study_feelings": "assets/categories-hd/study-reflections.webp",
-    "study_review": "assets/categories-hd/study-review.webp",
-    "travel": "assets/categories-hd/travel-life.webp"
+    "personal": "assets/covers/personal.webp",
+    "ai": "assets/covers/ai.webp",
+    "creative": "assets/covers/creative.webp",
+    "study_feelings": "assets/covers/study_feelings.webp",
+    "study_review": "assets/covers/study_review.webp",
+    "travel": "assets/covers/travel.webp",
+    "contact": "assets/covers/contact.webp"
   },
   "categories": [
     {
