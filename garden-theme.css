@@ -70,7 +70,7 @@ body { background: #0a0e0d; color: #e9eee9; }
 .category-card {
   height: auto;
   min-height: 103px;
-  background: #141c17 !important;
+  background: #141c17;
   border: 1px solid #334339;
   border-radius: 12px;
   box-shadow: none;
@@ -95,7 +95,7 @@ body { background: #0a0e0d; color: #e9eee9; }
 .update-row { color: #e9eee9; border-color: #324037; }
 .thumb, .featured-image, .entry-image, .article-dialog .article-cover {
   background-image: radial-gradient(circle at 72% 28%, #355d3b, transparent 40%),
-    linear-gradient(135deg, #1a3827, #0f241a) !important;
+    linear-gradient(135deg, #1a3827, #0f241a);
 }
 .tag { color: #cce7c5; background: #284531; }
 .lab-tabs button, .result-card, .dark .result-card { color: #d7eed1; background: #24402c; }
