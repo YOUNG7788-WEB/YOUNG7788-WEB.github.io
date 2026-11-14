@@ -15,7 +15,7 @@ const copy = {
   en:{navHome:"Home",navNotes:"Content",navProjects:"AI Play",navLife:"Creative",navAbout:"Contact",explore:"Explore the garden",aboutMe:"About me",profileRole:"Electrical Engineering",growing:"● Always growing",statNotes:"Posts",statProjects:"Works",statIdeas:"Ideas",updates:"Latest Updates",viewAll:"View all →",labTitle:"Interactive Lab",ohmTab:"Ohm's Law",moreSoon:"More experiments soon",voltage:"Voltage U",resistance:"Resistance R",current:"Current I = U / R",labNote:"Move the sliders to see how voltage and resistance affect current.",featured:"Creative Studio",gardenIndex:"GARDEN INDEX",browse:"Explore the Garden",browseDesc:"Seven paths through ideas, learning, making and life.",edit:"Edit content & layout",aboutTitle:"About this digital garden",contact:"Email: 1809039935@qq.com",footer:"Growing between engineering and curiosity.",backTop:"Back to top ↑",labShort:"Lab",editorTitle:"Edit the garden",editorHint:"Save a local preview, then export JSON for publication.",editorGeneral:"Home & layout",editorItems:"Entries",editorTransfer:"Import & export",all:"All",empty:"No matches. Try another word or category.",read:"Read more →",sample:"Sample",pending:"Coming soon",noUpdates:"No posts yet. Explore the seven sections below."}
 };
 let data = null;
-let lang = safeStorageGet("ydg-lang") === "en" ? "en" : "zh";
+let lang = "zh";
 let filter = "all";
 let query = "";
 let activeId = null;
@@ -107,9 +107,9 @@ function gardenMarkdown(source){
 }
 function openArticle(id){
  const item=data.items.find((entry)=>entry.id===id); if(!item)return;
- $("article-content").innerHTML='<div class="article-cover" style="'+cardImageStyle(item)+'"></div><p class="kicker">'+esc(cat(item.category)[lang])+' · '+esc(item.date||"")+'</p><h2>'+esc(label(item.title))+'</h2><div class="article-body">'+gardenMarkdown(label(item.body))+'</div>';
- $("article-dialog").showModal();
+ window.location.href="article.html?id="+encodeURIComponent(id);
 }
+
 function updateOhm(){
  const u=Number($("voltage").value),r=Number($("resistance").value),i=u/r;
  $("voltage-output").textContent=u+" V";$("resistance-output").textContent=r+" Ω";
