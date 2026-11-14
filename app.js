@@ -47,11 +47,16 @@ function cardImageStyle(item){
  return image?'background-image:url(&quot;'+esc(image)+'&quot;);background-size:cover;background-position:center':'';
 }
 function renderCategories(){
- $("explore").innerHTML=categories.map((c)=>'<a class="category-card" style="--pos:'+c.pos+';background-image:linear-gradient(180deg,rgba(8,27,40,.6),rgba(8,27,40,.05) 55%,rgba(8,27,40,.44)),url(&quot;'+esc(safeImage(data.categoryImages&&data.categoryImages[c.id]))+'&quot;);background-size:cover;background-position:center" href="#collection" data-category="'+c.id+'"><span class="category-content"><span class="category-icon">'+c.icon+'</span><span><strong>'+esc(c[lang])+'</strong><small>'+esc(c.en)+'</small></span><span class="category-arrow">→</span></span></a>').join("");
+ $("explore").innerHTML=categories.map((c,index)=>{
+  const count=data.items.filter(item=>item.category===c.id&&!item.placeholder).length;
+  const image=safeImage(data.categoryImages&&data.categoryImages[c.id]);
+  return '<a class="category-card" href="#collection" data-category="'+c.id+'" aria-label="'+esc(c.zh)+'，'+count+'篇文章"><img class="category-art" src="'+esc(image)+'" alt="" loading="'+(index<2?'eager':'lazy')+'" decoding="async" width="1200" height="800"><span class="category-content" aria-hidden="true"><span class="category-count">'+count+' 篇记录</span><span class="category-arrow">↗</span></span></a>';
+ }).join("");
  $("filter-buttons").innerHTML='<button type="button" data-filter="all" class="'+(filter==="all"?"selected":"")+'">'+copy[lang].all+'</button>'+categories.map((c)=>'<button type="button" data-filter="'+c.id+'" class="'+(filter===c.id?"selected":"")+'">'+esc(c[lang])+'</button>').join("");
  document.querySelectorAll("[data-category]").forEach((el)=>el.addEventListener("click",()=>setFilter(el.dataset.category)));
  document.querySelectorAll("[data-filter]").forEach((el)=>el.addEventListener("click",()=>setFilter(el.dataset.filter)));
 }
+
 function renderLatest(){
  const recent=data.items.filter((item)=>!item.placeholder).sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,3);
  $("latest-list").innerHTML=recent.length?recent.map((item)=>'<button class="update-row" type="button" data-open="'+esc(item.id)+'"><span class="thumb" style="'+cardImageStyle(item)+'"></span><span class="update-info"><strong>'+esc(label(item.title))+'</strong><small>'+esc(item.date||"")+'</small></span><span class="tag">'+esc(cat(item.category)[lang])+'</span></button>').join(""):'<p class="panel-empty">'+copy[lang].noUpdates+'</p>';

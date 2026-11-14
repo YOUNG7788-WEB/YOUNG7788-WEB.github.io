@@ -37,6 +37,7 @@
       document.title=title+' · Young 的数字花园';
       $('category').textContent=labels[item.category]??'文章';$('title').textContent=title;
       $('summary').textContent=item.summary.zh;
+      $('article-meta').textContent=item.date+' · 约 '+Math.max(1,Math.ceil(item.body.zh.length/450))+' 分钟';
       $('cover').style.backgroundImage='linear-gradient(90deg,rgba(6,12,10,.94),rgba(6,12,10,.46)),url("'+encodeURI(image)+'")';
       $('cover').dataset.category=item.category;
       const rendered=renderMarkdown(item.body.zh);$('body').innerHTML=rendered.html;
