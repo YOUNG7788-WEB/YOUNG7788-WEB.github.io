@@ -42,24 +42,54 @@ function applyTranslation(){
  $("top-search").placeholder=lang==="zh"?"搜索笔记、项目或关键词…":"Search notes, projects or keywords…";
  $("collection-search").placeholder=lang==="zh"?"搜索标题或正文…":"Search titles or text…";
 }
+
+function safePreview(value){
+ return typeof value==="string"&&value.length<120000&&value.startsWith("data:image/jpeg;base64,")&&new RegExp("^[A-Za-z0-9+/=]+$").test(value.slice(23))?value:"";
+}
+const fullCoverCache=new Map(),observedCovers=new Set();
+let fullCoverObserver;
+function upgradeCovers(){
+ if(!("IntersectionObserver" in window)||(navigator.connection&&navigator.connection.saveData))return;
+ if(!fullCoverObserver)fullCoverObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   if(!entry.isIntersecting)return;
+   const el=entry.target,src=safeImage(el.dataset.coverSrc);
+   fullCoverObserver.unobserve(el);observedCovers.delete(el);
+   if(!src)return;
+   if(!fullCoverCache.has(src))fullCoverCache.set(src,new Promise(resolve=>{
+    const probe=new Image();probe.decoding="async";probe.onload=()=>resolve(probe.naturalWidth>0);probe.onerror=()=>resolve(false);probe.src=src;
+   }));
+   fullCoverCache.get(src).then(ok=>{
+    if(!ok||!el.isConnected)return;
+    if(el.tagName==="IMG"){const fallback=el.getAttribute("src");el.addEventListener("error",()=>{if(el.getAttribute("src")!==fallback)el.src=fallback;});el.src=src;}
+    else el.style.backgroundImage='url("'+src+'"),'+el.style.backgroundImage;
+   });
+  });
+ },{rootMargin:"120px"});
+ for(const el of observedCovers){if(!el.isConnected){fullCoverObserver.unobserve(el);observedCovers.delete(el);}}
+ document.querySelectorAll("[data-cover-src]").forEach(el=>{if(el.dataset.hdObserved)return;el.dataset.hdObserved="true";observedCovers.add(el);fullCoverObserver.observe(el);});
+}
 function cardImageStyle(item){
- const image=safeImage(item.image)||safeImage(data.categoryImages&&data.categoryImages[item.category]);
+ const preview=safePreview(item.preview)||safePreview(data.categoryPreviews&&data.categoryPreviews[item.category]);
+ const image=preview||safeImage(item.image)||safeImage(data.categoryImages&&data.categoryImages[item.category]);
  return image?'background-image:url(&quot;'+esc(image)+'&quot;);background-size:cover;background-position:center':'';
 }
 function renderCategories(){
- $("explore").innerHTML=categories.map((c,index)=>{
+ $("explore").innerHTML=categories.map(c=>{
   const count=data.items.filter(item=>item.category===c.id&&!item.placeholder).length;
-  const image=safeImage(data.categoryImages&&data.categoryImages[c.id]);
-  return '<a class="category-card" href="#collection" data-category="'+c.id+'" aria-label="'+esc(c.zh)+'，'+count+'篇文章"><img class="category-art" src="'+esc(image)+'" alt="" loading="'+(index<2?'eager':'lazy')+'" decoding="async" width="1200" height="800"><span class="category-content" aria-hidden="true"><span class="category-count">'+count+' 篇记录</span><span class="category-arrow">↗</span></span></a>';
+  const full=safeImage(data.categoryImages&&data.categoryImages[c.id]);
+  const preview=safePreview(data.categoryPreviews&&data.categoryPreviews[c.id])||full;
+  return '<a class="category-card" href="#collection" data-category="'+c.id+'" aria-label="'+esc(c.zh)+'，'+count+'篇文章"><span class="category-fallback" aria-hidden="true">'+esc(c.zh)+'</span><img class="category-art" src="'+esc(preview)+'" data-cover-src="'+esc(full)+'" alt="" loading="eager" decoding="async" width="1200" height="800"><span class="category-content" aria-hidden="true"><span class="category-count">'+count+' 篇记录</span><span class="category-arrow">↗</span></span></a>';
  }).join("");
- $("filter-buttons").innerHTML='<button type="button" data-filter="all" class="'+(filter==="all"?"selected":"")+'">'+copy[lang].all+'</button>'+categories.map((c)=>'<button type="button" data-filter="'+c.id+'" class="'+(filter===c.id?"selected":"")+'">'+esc(c[lang])+'</button>').join("");
- document.querySelectorAll("[data-category]").forEach((el)=>el.addEventListener("click",()=>setFilter(el.dataset.category)));
- document.querySelectorAll("[data-filter]").forEach((el)=>el.addEventListener("click",()=>setFilter(el.dataset.filter)));
+ $("filter-buttons").innerHTML='<button type="button" data-filter="all" class="'+(filter==="all"?"selected":"")+'">'+copy[lang].all+'</button>'+categories.map(c=>'<button type="button" data-filter="'+c.id+'" class="'+(filter===c.id?"selected":"")+'">'+esc(c[lang])+'</button>').join("");
+ document.querySelectorAll("[data-category]").forEach(el=>el.addEventListener("click",()=>setFilter(el.dataset.category)));
+ document.querySelectorAll("[data-filter]").forEach(el=>el.addEventListener("click",()=>setFilter(el.dataset.filter)));
+ upgradeCovers();
 }
 
 function renderLatest(){
  const recent=data.items.filter((item)=>!item.placeholder).sort((a,b)=>String(b.date).localeCompare(String(a.date))).slice(0,3);
- $("latest-list").innerHTML=recent.length?recent.map((item)=>'<button class="update-row" type="button" data-open="'+esc(item.id)+'"><span class="thumb" style="'+cardImageStyle(item)+'"></span><span class="update-info"><strong>'+esc(label(item.title))+'</strong><small>'+esc(item.date||"")+'</small></span><span class="tag">'+esc(cat(item.category)[lang])+'</span></button>').join(""):'<p class="panel-empty">'+copy[lang].noUpdates+'</p>';
+ $("latest-list").innerHTML=recent.length?recent.map((item,index)=>'<button class="update-row" type="button" data-open="'+esc(item.id)+'"><span class="update-number">'+String(index+1).padStart(2,"0")+'</span><span class="update-info"><strong>'+esc(label(item.title))+'</strong><small>'+esc(item.date||"")+'</small></span><span class="tag">'+esc(cat(item.category)[lang])+'</span></button>').join(""):'<p class="panel-empty">'+copy[lang].noUpdates+'</p>';
  $("stat-notes").textContent=data.items.filter((item)=>!item.placeholder).length;
  $("stat-projects").textContent=data.items.filter((item)=>item.featured&&!item.placeholder).length;
 }
@@ -74,9 +104,9 @@ function renderGrid(){
   return text.includes(query.toLocaleLowerCase());
  });
  $("content-grid").style.setProperty("--columns",String([1,2,3].includes(Number(data.layout.columns))?data.layout.columns:3));
- $("content-grid").innerHTML=matched.map((item)=>'<button class="entry-card" type="button" data-open="'+esc(item.id)+'"><div class="entry-image" style="'+cardImageStyle(item)+'"></div><div class="entry-details"><div class="entry-meta"><span>'+esc(cat(item.category)[lang])+'</span><span>'+esc(item.date||"")+'</span></div><h3>'+esc(label(item.title))+'</h3><p>'+esc(label(item.summary))+'</p><span class="entry-more">'+(item.placeholder?copy[lang].pending:copy[lang].read)+'</span></div></button>').join("");
+ $("content-grid").innerHTML=matched.map((item)=>'<button class="entry-card" type="button" data-open="'+esc(item.id)+'"><div class="entry-image" data-cover-src="'+esc(safeImage(item.image)||safeImage(data.categoryImages&&data.categoryImages[item.category]))+'" style="'+cardImageStyle(item)+'"></div><div class="entry-details"><div class="entry-meta"><span>'+esc(cat(item.category)[lang])+'</span><span>'+esc(item.date||"")+'</span></div><h3>'+esc(label(item.title))+'</h3><p>'+esc(label(item.summary))+'</p><span class="entry-more">'+(item.placeholder?copy[lang].pending:copy[lang].read)+'</span></div></button>').join("");
  $("empty-state").hidden=matched.length>0;
- $("empty-state").textContent=copy[lang].empty;
+ $("empty-state").textContent=copy[lang].empty;upgradeCovers();
 }
 
 function syncCategories(){

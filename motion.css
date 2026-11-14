@@ -5,7 +5,7 @@
 .back-to-top:focus-visible,.category-card:focus-visible{outline:3px solid #c5e4b6;outline-offset:5px}
 .hero-copy>*{animation:hero-arrive .7s cubic-bezier(.2,.65,.3,1) both}.hero-copy>*:nth-child(2){animation-delay:.08s}.hero-copy>*:nth-child(3){animation-delay:.16s}.hero-copy>*:nth-child(4){animation-delay:.24s}.hero-copy>*:nth-child(5){animation-delay:.3s}
 @keyframes hero-arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.motion-ready [data-reveal]{opacity:0;translate:0 22px;transition:opacity .55s ease var(--reveal-delay,0ms),translate .55s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms)}
+.motion-ready [data-reveal]{opacity:1;translate:0 22px;transition:opacity .55s ease var(--reveal-delay,0ms),translate .55s cubic-bezier(.2,.65,.3,1) var(--reveal-delay,0ms)}
 .motion-ready [data-reveal].is-revealed{opacity:1;translate:0 0}
 .category-strip{gap:18px!important}.category-strip>.category-card{height:auto!important;aspect-ratio:3/2;min-height:0!important;background-image:none!important;border-radius:12px!important;background-color:#1b231d!important;transition:transform .25s,border-color .25s,box-shadow .25s!important}
 .category-card::before,.category-card::after{display:none!important}.category-art{display:block;position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.65,.3,1);pointer-events:none}
@@ -23,3 +23,6 @@
 
 .article-meta{font-size:12px;color:#b6cdb5;margin:0 0 18px;letter-spacing:.04em}#theme-toggle{display:none!important}
 @media(max-width:600px){.top-search{width:124px!important;background:#172019;border:1px solid #344638;border-radius:8px;padding:6px 8px!important}.top-search input{display:block!important;position:static!important;right:auto!important;top:auto!important;width:100%!important;min-width:0!important;background:none!important;padding:0!important;color:#e6eee2;font-size:10px!important}.top-search>span{display:none}.nav-actions{gap:7px}}
+
+/* Keep a local preview visible while the full image loads. */
+.category-fallback{position:absolute;inset:0;z-index:0;display:grid;place-items:center;padding:20px;text-align:center;color:#dcebd3;background:#1a291e;font-size:22px;font-weight:700}.category-art{z-index:1}.category-content{z-index:2!important}.update-number{flex:none;width:40px;color:#89a88c;font:20px ui-monospace,Consolas,monospace}.entry-image{background-repeat:no-repeat}

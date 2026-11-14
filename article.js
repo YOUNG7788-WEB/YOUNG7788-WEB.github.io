@@ -33,12 +33,14 @@
       const response=await fetch('content.json',{cache:'no-store'});if(!response.ok)throw Error('内容暂时没加载出来。');
       const data=await response.json(), item=data.items.find(x=>x.id===id&&!x.placeholder);
       if(!item)throw Error('这篇文章暂时找不到。');
-      const title=item.title.zh, image=data.categoryImages[item.category];
+      const title=item.title.zh, image=item.image||data.categoryImages[item.category];
+      const rawPreview=item.preview||(data.categoryPreviews&&data.categoryPreviews[item.category]);
+      const preview=typeof rawPreview==="string"&&rawPreview.startsWith("data:image/jpeg;base64,")&&new RegExp("^[A-Za-z0-9+/=]+$").test(rawPreview.slice(23))?rawPreview:"";
       document.title=title+' · Young 的数字花园';
       $('category').textContent=labels[item.category]??'文章';$('title').textContent=title;
       $('summary').textContent=item.summary.zh;
       $('article-meta').textContent=item.date+' · 约 '+Math.max(1,Math.ceil(item.body.zh.length/450))+' 分钟';
-      $('cover').style.backgroundImage='linear-gradient(90deg,rgba(6,12,10,.94),rgba(6,12,10,.46)),url("'+encodeURI(image)+'")';
+      $('cover').style.backgroundImage='linear-gradient(90deg,rgba(6,12,10,.94),rgba(6,12,10,.46)),url("'+encodeURI(image)+'")'+(preview?',url("'+preview+'")':'');
       $('cover').dataset.category=item.category;
       const rendered=renderMarkdown(item.body.zh);$('body').innerHTML=rendered.html;
       $('outline').innerHTML=rendered.headings.length?rendered.headings.map(h=>'<a href="#'+h.id+'">'+esc(h.title)+'</a>').join(''):'<a href="#body">从头读起</a>';
