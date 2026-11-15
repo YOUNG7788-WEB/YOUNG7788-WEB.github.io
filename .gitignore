@@ -15,3 +15,6 @@ __pycache__/
 private/
 secrets/
 site-build/
+
+# Rebuilt from tracked public source and assets.
+worker/index.js

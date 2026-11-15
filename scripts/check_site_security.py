@@ -61,9 +61,10 @@ def validate(root):
   if '  - '+name+'\n' not in config:errors.append('Missing publication exclusion: '+name)
  for p in root.rglob('*'):
   if not p.is_file() or '.git' in p.relative_to(root).parts:continue
+  if p.relative_to(root).as_posix()=='worker/index.js':continue
   if any(part in ['original','staging','dist','__pycache__','site-build'] for part in p.relative_to(root).parts):continue
   if p.name=='.env' or p.name.startswith('.env.') and p.name!='.env.example':errors.append(str(p.relative_to(root))+': environment file must not be committed')
-  if p.suffix.lower() not in ['.html','.js','.json','.py','.css','.md','.yml','.yaml','.txt']:continue
+  if p.suffix.lower() not in ['.html','.js','.mjs','.json','.py','.css','.md','.yml','.yaml','.txt','.sh','.ini','.toml']:continue
   try:text=p.read_text()
   except UnicodeDecodeError:continue
   for name,pattern in SECRET_PATTERNS.items():

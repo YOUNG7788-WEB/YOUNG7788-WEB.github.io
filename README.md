@@ -35,3 +35,9 @@ python scripts/build_site.py --data content.json --source-root . --output site-b
 生成器自动为全部页面添加匹配脚本内容的 CSP 哈希与 no-referrer 策略。构建后运行 `python scripts/check_site_security.py .`。此检查只使用 Python 标准库。
 
 根目录的 `_config.yml` 会在 GitHub Pages 构建时排除 `content.json`、源码脚本和文档。不要恢复根目录 `.nojekyll`；它会使这些排除规则失效。仓库本身仍然公开，私人草稿、密码和密钥不能放入本仓库，详见 `SECURITY.md`。
+
+## 带响应头的 Worker 版本
+
+`python scripts/build_secure_worker.py` 把已生成的公开页面及其依赖图片打包为 `dist/server/index.js`，不使用第三方运行时依赖。完整高清原图保留在原站，需要时只从固定原站按白名单加载；不会转发调用者的 Cookie 或认证头。
+
+运行 `node scripts/test_secure_worker.mjs` 验证响应头、缓存、旧文章跳转和源文件隔离。Worker 的 HTTP 响应提供真正的 `frame-ancestors`、`X-Frame-Options`、`nosniff` 和权限策略。账户 2FA 与 GitHub 管理权限仍需账户本人授权。

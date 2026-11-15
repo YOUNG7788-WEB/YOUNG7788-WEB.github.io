@@ -15,3 +15,9 @@ Checks: `python scripts/check_site_security.py .`. GitHub Actions runs this chec
 GitHub Pages does not expose arbitrary response-header configuration. Full protection from other sites embedding a page requires `Content-Security-Policy: frame-ancestors 'none'` or `X-Frame-Options` from a header-capable host or proxy. Putting these in HTML meta would not enforce protection. `frame-src 'none'` only prevents this page embedding other frames; it does not prevent other pages embedding this site.
 
 Account 2FA, session review and access-token review require the account owner's GitHub security settings. The current connection does not return the 2FA setting, and its integration permission cannot read or change classic branch-protection settings. Review these at https://github.com/settings/security and https://github.com/settings/tokens . Do not share recovery codes, passwords or tokens in chat.
+
+## Header-capable version
+
+The dependency-free Worker implementation in worker/runtime.mjs sends frame-ancestors 'none', X-Frame-Options: DENY, nosniff, no-referrer and Permissions-Policy response headers on successful and error responses. The build bundles public runtime files only. Any legacy-artwork fallback uses a fixed original origin and a fixed path allowlist, strips authentication and cookies, and refuses redirects. No authoring JSON is bundled.
+
+The Worker and GitHub Pages are separate hosting surfaces. Adding Worker headers does not make GitHub Pages start sending arbitrary headers; deployment and public-entry migration must be verified separately.

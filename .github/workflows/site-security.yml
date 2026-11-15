@@ -20,3 +20,6 @@ jobs:
           persist-credentials: false
       - name: Validate script hashes, publication boundary and secret signatures
         run: python3 scripts/check_site_security.py .
+
+      - name: Check security headers and public-resource routing
+        run: node scripts/test_secure_runtime.mjs
