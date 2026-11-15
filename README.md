@@ -29,3 +29,9 @@ python scripts/build_site.py --data content.json --source-root . --output site-b
 运行同一构建命令即可生成完整站点。生成产物清单包括新增的 `assets/optimized/`，发布时需一并复制。原始高清封面保持不变；浏览器按屏幕尺寸选择 480/最大 960 像素的 WebP 封面。首页不依赖第三方字体、脚本 CDN、登录或外部接口。省流入口为 `/lite.html`。
 
 大陆可达性需要大陆运营商节点实测；本仓库的性能体积统计不能当成大陆测速结果。
+
+## 安全发布
+
+生成器自动为全部页面添加匹配脚本内容的 CSP 哈希与 no-referrer 策略。构建后运行 `python scripts/check_site_security.py .`。此检查只使用 Python 标准库。
+
+根目录的 `_config.yml` 会在 GitHub Pages 构建时排除 `content.json`、源码脚本和文档。不要恢复根目录 `.nojekyll`；它会使这些排除规则失效。仓库本身仍然公开，私人草稿、密码和密钥不能放入本仓库，详见 `SECURITY.md`。

@@ -1,3 +1,17 @@
-site-build/
+original/
+staging/
 __pycache__/
-*.pyc
+*.tar.gz
+*.zip
+
+# Credentials and local/private material never belong in this public repository.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.log
+private/
+secrets/
+site-build/

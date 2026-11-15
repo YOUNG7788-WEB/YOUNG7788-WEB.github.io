@@ -3,7 +3,7 @@ from html import escape as e
 import json
 
 def render(data,root,out):
- css=(root/'scripts/editorial.css').read_text();js=(root/'scripts/editorial.js').read_text();items=[i for i in data['items'] if not i.get('placeholder')];cats=sorted(data['categories'],key=lambda c:c.get('order',0));labels={c['id']:c for c in cats}
+ css=(root/'scripts/editorial.css').read_text();js=(root/'scripts/editorial.js').read_text();items=[i for i in data['items'] if not i.get('placeholder') and i.get('status')=='published'];cats=sorted(data['categories'],key=lambda c:c.get('order',0));labels={c['id']:c for c in cats}
  def tr(tag,zh,en,attrs=''):return f'<{tag} data-zh="{e(zh,quote=True)}" data-en="{e(en,quote=True)}" {attrs}>{e(zh)}</{tag}>'
  def label(n,title,note=''):return f'<div class="section-label"><span>{n} / 05 &nbsp; {title}</span><span>{note}</span></div>'
  def img(i):

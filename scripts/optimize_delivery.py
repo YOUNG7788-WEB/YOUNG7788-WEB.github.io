@@ -10,7 +10,7 @@ def optimize(data,out):
  manifest=json.loads((out/'publish-manifest.json').read_text())
  reports={}
  for i in data['items']:
-  if i.get('placeholder'):continue
+  if i.get('placeholder') or i.get('status')!='published':continue
   source=root/i['image'];image=ImageOps.exif_transpose(Image.open(source)).convert('RGB')
   image.thumbnail((960,640),Image.Resampling.LANCZOS)
   for quality in [72,67,62,57,52]:

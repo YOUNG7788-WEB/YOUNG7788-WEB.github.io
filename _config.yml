@@ -1,0 +1,17 @@
+# Publish generated pages and assets; keep authoring inputs off the website.
+# The repository itself remains public: do not commit private data.
+exclude:
+  - content.json
+  - scripts
+  - README.md
+  - AGENTS.md
+  - REDESIGN.md
+  - SECURITY.md
+  - performance-budget.json
+  - tests
+  - staging
+  - dist
+  - original
+  - private
+  - secrets
+  - site-build

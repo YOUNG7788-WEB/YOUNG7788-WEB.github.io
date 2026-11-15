@@ -20,7 +20,7 @@ manifest=json.loads(Path(args.manifest).read_text(encoding='utf-8')) if args.man
 css=re.sub(r'/\*.*?\*/','',Path(args.css).read_text(encoding='utf-8'),flags=re.S)
 css=re.sub(r'\s+',' ',css).strip()
 js=Path(args.js).read_text(encoding='utf-8').strip()
-items=[i for i in data['items'] if not i.get('placeholder')]
+items=[i for i in data['items'] if not i.get('placeholder') and i.get('status')=='published']
 cats=sorted(data['categories'],key=lambda c:c.get('order',0))
 assert all(re.fullmatch(r'[a-z0-9-]+',i['id']) for i in items)
 assert all(re.fullmatch(r'[a-z0-9_]+',c['id']) for c in cats)
@@ -51,7 +51,7 @@ def cover(scope,ident,original):
 
 for c in cats: cover('category',c['id'],data['categoryImages'][c['id']])
 for i in items: cover('article',i['id'],i['image'])
-assert len(covers)==len({c['sha256'] for c in covers.values()})==26
+assert len(covers)==len({c['sha256'] for c in covers.values()})==len(cats)+len(items)
 
 def inline(text):
     value=escape(text,quote=True)

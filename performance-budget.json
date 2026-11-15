@@ -2,31 +2,31 @@
   "generated_date": "2026-11-15",
   "articles": 19,
   "unique_covers": 26,
-  "homepage_required_html_bytes": 57657,
-  "homepage_gzip_bytes_for_comparison": 15075,
+  "homepage_required_html_bytes": 58237,
+  "homepage_gzip_bytes_for_comparison": 15300,
   "lite_index_html_bytes": 9253,
   "homepage_blocking_external_files": 0,
   "previous_required_files_uncompressed_bytes": 0,
   "article_html_bytes": {
-    "a-share-quant-research": 32905,
-    "garden-origin": 22850,
-    "x-notes": 22832,
-    "my-path": 22246,
-    "night-talk": 24103,
-    "engineering-study": 22880,
-    "study-rhythm": 22905,
-    "vps-review": 35664,
-    "touchpad-review": 23007,
-    "system-maintenance": 22891,
-    "ai-workflow": 23083,
-    "website-build": 23152,
-    "briefing-process": 23498,
-    "parallel-universe": 23076,
-    "night-video": 22919,
-    "creative-reading": 22877,
-    "network-life": 22348,
-    "f1-business": 24901,
-    "contact-me": 21561
+    "a-share-quant-research": 33485,
+    "garden-origin": 23430,
+    "x-notes": 23412,
+    "my-path": 22826,
+    "night-talk": 24683,
+    "engineering-study": 23460,
+    "study-rhythm": 23485,
+    "vps-review": 36244,
+    "touchpad-review": 23587,
+    "system-maintenance": 23471,
+    "ai-workflow": 23663,
+    "website-build": 23732,
+    "briefing-process": 24078,
+    "parallel-universe": 23656,
+    "night-video": 23499,
+    "creative-reading": 23457,
+    "network-life": 22928,
+    "f1-business": 25481,
+    "contact-me": 22141
   },
   "thumbnail_bytes": {
     "category-personal": 16012,
@@ -175,6 +175,7 @@
     }
   },
   "external_runtime_dependencies": 0,
+  "homepage_eager_images": 0,
   "delivery_notes": [
     "HTML contains all article titles and summaries; article bodies are static HTML.",
     "System fonts; no Google Fonts, external script CDN, analytics or third-party API.",
@@ -182,5 +183,5 @@
     "Article covers use 480w/960w same-origin WebP; original art files are preserved.",
     "No mainland availability assertion without actual mainland-node evidence."
   ],
-  "homepage_eager_images": 0
+  "csp_protected_pages": 23
 }
