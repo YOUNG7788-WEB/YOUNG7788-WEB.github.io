@@ -21,3 +21,11 @@ python scripts/build_site.py --data content.json --source-root . --output site-b
 检查 `site-build` 中的页面，然后把 `publish-manifest.json` 列出的文件复制回仓库并提交。保留原来的高清封面文件；同时提交 `index.html`、`lite.html`、`article.html`、`posts/`、新增缩略图和 `search-index.json` 等生成结果。
 
 `scripts/site.css` 和 `scripts/site.js` 会内联到页面中。旧的 `article.html?id=…` 网址会转到对应静态长文。`performance-budget.json` 记录文件体积，不代表大陆网络测速结果。
+
+## 极简数字花园与加载优化
+
+首页采用大字排版，保留 19 篇文章和原始封面。首页源位于 `scripts/editorial_home.py`、`scripts/editorial.css`、`scripts/editorial.js`；正文样式和交互位于 `scripts/site.css`、`scripts/site.js`。`scripts/build_site.py` 先调用静态正文生成器，再生成首页和响应式图片。
+
+运行同一构建命令即可生成完整站点。生成产物清单包括新增的 `assets/optimized/`，发布时需一并复制。原始高清封面保持不变；浏览器按屏幕尺寸选择 480/最大 960 像素的 WebP 封面。首页不依赖第三方字体、脚本 CDN、登录或外部接口。省流入口为 `/lite.html`。
+
+大陆可达性需要大陆运营商节点实测；本仓库的性能体积统计不能当成大陆测速结果。

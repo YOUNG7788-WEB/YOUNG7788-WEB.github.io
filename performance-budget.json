@@ -2,31 +2,31 @@
   "generated_date": "2026-11-15",
   "articles": 19,
   "unique_covers": 26,
-  "homepage_required_html_bytes": 70982,
-  "homepage_gzip_bytes_for_comparison": 27700,
+  "homepage_required_html_bytes": 57657,
+  "homepage_gzip_bytes_for_comparison": 15075,
   "lite_index_html_bytes": 9253,
   "homepage_blocking_external_files": 0,
-  "previous_required_files_uncompressed_bytes": 648368,
+  "previous_required_files_uncompressed_bytes": 0,
   "article_html_bytes": {
-    "a-share-quant-research": 31524,
-    "garden-origin": 21487,
-    "x-notes": 21489,
-    "my-path": 20903,
-    "night-talk": 22754,
-    "engineering-study": 21509,
-    "study-rhythm": 21544,
-    "vps-review": 34311,
-    "touchpad-review": 21648,
-    "system-maintenance": 21526,
-    "ai-workflow": 21728,
-    "website-build": 21789,
-    "briefing-process": 22129,
-    "parallel-universe": 21717,
-    "night-video": 21560,
-    "creative-reading": 21508,
-    "network-life": 20991,
-    "f1-business": 23550,
-    "contact-me": 20204
+    "a-share-quant-research": 32905,
+    "garden-origin": 22850,
+    "x-notes": 22832,
+    "my-path": 22246,
+    "night-talk": 24103,
+    "engineering-study": 22880,
+    "study-rhythm": 22905,
+    "vps-review": 35664,
+    "touchpad-review": 23007,
+    "system-maintenance": 22891,
+    "ai-workflow": 23083,
+    "website-build": 23152,
+    "briefing-process": 23498,
+    "parallel-universe": 23076,
+    "night-video": 22919,
+    "creative-reading": 22877,
+    "network-life": 22348,
+    "f1-business": 24901,
+    "contact-me": 21561
   },
   "thumbnail_bytes": {
     "category-personal": 16012,
@@ -36,25 +36,151 @@
     "category-study_review": 21010,
     "category-travel": 6906,
     "category-contact": 14974,
-    "article-a-share-quant-research": 28356,
-    "article-garden-origin": 27882,
-    "article-x-notes": 27466,
-    "article-my-path": 21188,
-    "article-night-talk": 21946,
-    "article-engineering-study": 24300,
-    "article-study-rhythm": 22924,
-    "article-vps-review": 27198,
-    "article-touchpad-review": 51052,
-    "article-system-maintenance": 15548,
-    "article-ai-workflow": 19738,
-    "article-website-build": 23466,
-    "article-briefing-process": 43192,
-    "article-parallel-universe": 47902,
-    "article-night-video": 35118,
-    "article-creative-reading": 31336,
-    "article-network-life": 12200,
-    "article-f1-business": 29790,
-    "article-contact-me": 16754
+    "article-a-share-quant-research": 28224,
+    "article-garden-origin": 27490,
+    "article-x-notes": 27276,
+    "article-my-path": 20964,
+    "article-night-talk": 21614,
+    "article-engineering-study": 24062,
+    "article-study-rhythm": 22810,
+    "article-vps-review": 26800,
+    "article-touchpad-review": 50596,
+    "article-system-maintenance": 15280,
+    "article-ai-workflow": 19570,
+    "article-website-build": 23312,
+    "article-briefing-process": 42738,
+    "article-parallel-universe": 47132,
+    "article-night-video": 34314,
+    "article-creative-reading": 31040,
+    "article-network-life": 11934,
+    "article-f1-business": 29356,
+    "article-contact-me": 16610
   },
-  "notes": "Byte counts are not a mainland speed measurement. All article text is present in HTML; search index is fetched only on search intent. Full-size art is used on article pages."
+  "notes": "Byte counts are not a mainland speed measurement. All article text is present in HTML; search index is fetched only on search intent. Full-size art is used on article pages.",
+  "design": "Young editorial garden",
+  "responsive_covers": {
+    "a-share-quant-research": {
+      "original_bytes": 184506,
+      "responsive_960_bytes": 75574,
+      "responsive_width": 960,
+      "mobile_480_bytes": 28224
+    },
+    "garden-origin": {
+      "original_bytes": 151108,
+      "responsive_960_bytes": 67178,
+      "responsive_width": 960,
+      "mobile_480_bytes": 27490
+    },
+    "x-notes": {
+      "original_bytes": 181154,
+      "responsive_960_bytes": 70396,
+      "responsive_width": 960,
+      "mobile_480_bytes": 27276
+    },
+    "my-path": {
+      "original_bytes": 143912,
+      "responsive_960_bytes": 52638,
+      "responsive_width": 960,
+      "mobile_480_bytes": 20964
+    },
+    "night-talk": {
+      "original_bytes": 105490,
+      "responsive_960_bytes": 48338,
+      "responsive_width": 960,
+      "mobile_480_bytes": 21614
+    },
+    "engineering-study": {
+      "original_bytes": 195168,
+      "responsive_960_bytes": 76038,
+      "responsive_width": 960,
+      "mobile_480_bytes": 24062
+    },
+    "study-rhythm": {
+      "original_bytes": 107864,
+      "responsive_960_bytes": 49638,
+      "responsive_width": 960,
+      "mobile_480_bytes": 22810
+    },
+    "vps-review": {
+      "original_bytes": 121142,
+      "responsive_960_bytes": 58978,
+      "responsive_width": 960,
+      "mobile_480_bytes": 26800
+    },
+    "touchpad-review": {
+      "original_bytes": 363898,
+      "responsive_960_bytes": 72292,
+      "responsive_width": 646,
+      "mobile_480_bytes": 50596
+    },
+    "system-maintenance": {
+      "original_bytes": 61520,
+      "responsive_960_bytes": 31704,
+      "responsive_width": 960,
+      "mobile_480_bytes": 15280
+    },
+    "ai-workflow": {
+      "original_bytes": 76884,
+      "responsive_960_bytes": 38630,
+      "responsive_width": 960,
+      "mobile_480_bytes": 19570
+    },
+    "website-build": {
+      "original_bytes": 136514,
+      "responsive_960_bytes": 53110,
+      "responsive_width": 960,
+      "mobile_480_bytes": 23312
+    },
+    "briefing-process": {
+      "original_bytes": 355764,
+      "responsive_960_bytes": 78608,
+      "responsive_width": 799,
+      "mobile_480_bytes": 42738
+    },
+    "parallel-universe": {
+      "original_bytes": 371222,
+      "responsive_960_bytes": 80542,
+      "responsive_width": 799,
+      "mobile_480_bytes": 47132
+    },
+    "night-video": {
+      "original_bytes": 219400,
+      "responsive_960_bytes": 78036,
+      "responsive_width": 960,
+      "mobile_480_bytes": 34314
+    },
+    "creative-reading": {
+      "original_bytes": 267226,
+      "responsive_960_bytes": 77672,
+      "responsive_width": 960,
+      "mobile_480_bytes": 31040
+    },
+    "network-life": {
+      "original_bytes": 74240,
+      "responsive_960_bytes": 29612,
+      "responsive_width": 960,
+      "mobile_480_bytes": 11934
+    },
+    "f1-business": {
+      "original_bytes": 118350,
+      "responsive_960_bytes": 61120,
+      "responsive_width": 960,
+      "mobile_480_bytes": 29356
+    },
+    "contact-me": {
+      "original_bytes": 151096,
+      "responsive_960_bytes": 51330,
+      "responsive_width": 960,
+      "mobile_480_bytes": 16610
+    }
+  },
+  "external_runtime_dependencies": 0,
+  "delivery_notes": [
+    "HTML contains all article titles and summaries; article bodies are static HTML.",
+    "System fonts; no Google Fonts, external script CDN, analytics or third-party API.",
+    "Work artwork lazy-loaded; archive artwork lazy-loaded and hidden in list mode.",
+    "Article covers use 480w/960w same-origin WebP; original art files are preserved.",
+    "No mainland availability assertion without actual mainland-node evidence."
+  ],
+  "homepage_eager_images": 0
 }
