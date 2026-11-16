@@ -1,5 +1,6 @@
 (() => {
 'use strict';
+try{if(localStorage.getItem('young-theme')==='dark')document.body.classList.add('dark')}catch{}
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 document.documentElement.classList.add('js');
 const progress=$('.progress'),back=$('.back-top');let queued=false;

@@ -1,7 +1,7 @@
 {
-  "bundled_runtime_files": 65,
+  "bundled_runtime_files": 66,
   "original_artwork_fallbacks": 69,
-  "worker_bytes": 2857140,
-  "worker_gzip_bytes": 1805222,
+  "worker_bytes": 2771984,
+  "worker_gzip_bytes": 1800190,
   "contains_authoring_json": false
 }

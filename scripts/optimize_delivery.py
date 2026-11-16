@@ -3,6 +3,7 @@ from pathlib import Path
 from PIL import Image, ImageOps
 from io import BytesIO
 import gzip,hashlib,json,re
+from html import escape
 
 def optimize(data,out):
  root=Path(__file__).resolve().parent.parent
@@ -35,12 +36,16 @@ def optimize(data,out):
   text=text.replace('<a class="back" href="/index.html#collection">','<a class="back" href="/index.html#writing">')
   text=text.replace('<a href="/index.html#explore">七个栏目</a>','<a href="/lite.html">省流阅读</a>')
   text=text.replace('/index.html#collection','/index.html#writing').replace('/index.html#explore','/index.html#writing')
+  related=[j for j in data['items'] if j.get('status')=='published' and not j.get('placeholder') and j['id']!=i['id'] and j['category']==i['category']][:2]
+  if not related:related=[j for j in data['items'] if j.get('status')=='published' and not j.get('placeholder') and j['id']!=i['id'] and j['category']!='contact'][:2]
+  cards=''.join('<a href="/posts/'+j['id']+'.html"><small>继续沿着这条小路</small><h3>'+escape(j['title']['zh'])+'</h3><span>读下一篇 ↗</span></a>' for j in related)
+  section='<section class="shell related-notes" aria-label="继续阅读"><p>KEEP READING / 再翻两页</p><div class="related-grid">'+cards+'</div></section>'
+  text=text.replace('<div class="shell article-end">',section+'<div class="shell article-end">')
   path.write_text(text)
   reports[i['id']]={'original_bytes':source.stat().st_size,'responsive_960_bytes':len(raw),'responsive_width':image.width,'mobile_480_bytes':thumb.stat().st_size}
   budget['article_html_bytes'][i['id']]=len(text.encode())
  html=(out/'index.html').read_text()
- # Keep work artwork out of the initial request and decoding path.
- html=html.replace('id="project-image" src=', 'id="project-image" loading="lazy" decoding="async" fetchpriority="low" src=')
+ # Work and archive artwork is authored with native lazy loading.
  (out/'index.html').write_text(html)
  budget.update(homepage_required_html_bytes=len(html.encode()),homepage_gzip_bytes_for_comparison=len(gzip.compress(html.encode())),responsive_covers=reports,external_runtime_dependencies=0,homepage_eager_images=0,delivery_notes=['HTML contains all article titles and summaries; article bodies are static HTML.','System fonts; no Google Fonts, external script CDN, analytics or third-party API.','Work artwork lazy-loaded; archive artwork lazy-loaded and hidden in list mode.','Article covers use 480w/960w same-origin WebP; original art files are preserved.','No mainland availability assertion without actual mainland-node evidence.'])
  (out/'performance-budget.json').write_text(json.dumps(budget,ensure_ascii=False,indent=2)+'\n')

@@ -57,14 +57,14 @@ def validate(root):
   if not (root/'posts'/f'{i["id"]}.html').is_file():errors.append('Missing published article '+i['id'])
  if (root/'.nojekyll').exists():errors.append('.nojekyll would bypass source-file exclusions')
  config=(root/'_config.yml').read_text()
- for name in ['content.json','scripts','README.md','AGENTS.md','SECURITY.md','performance-budget.json']:
+ for name in ['content.json','scripts','README.md','AGENTS.md','SECURITY.md','DESIGN.md','performance-budget.json']:
   if '  - '+name+'\n' not in config:errors.append('Missing publication exclusion: '+name)
  for p in root.rglob('*'):
   if not p.is_file() or '.git' in p.relative_to(root).parts:continue
   if p.relative_to(root).as_posix()=='worker/index.js':continue
   if any(part in ['original','staging','dist','__pycache__','site-build'] for part in p.relative_to(root).parts):continue
   if p.name=='.env' or p.name.startswith('.env.') and p.name!='.env.example':errors.append(str(p.relative_to(root))+': environment file must not be committed')
-  if p.suffix.lower() not in ['.html','.js','.mjs','.json','.py','.css','.md','.yml','.yaml','.txt','.sh','.ini','.toml']:continue
+  if p.suffix.lower() not in ['.html','.js','.mjs','.json','.xml','.svg','.py','.css','.md','.yml','.yaml','.txt','.sh','.ini','.toml']:continue
   try:text=p.read_text()
   except UnicodeDecodeError:continue
   for name,pattern in SECRET_PATTERNS.items():

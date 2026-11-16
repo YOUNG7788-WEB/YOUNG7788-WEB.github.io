@@ -22,8 +22,9 @@ def build():
  resources=set();assets={}
  def add(p,policy=None):
   raw=p.read_bytes();name='/'+p.relative_to(ROOT).as_posix();kind=mimetypes.guess_type(name)[0] or 'application/octet-stream'
-  text=p.suffix in ['.html','.js','.json','.svg']
+  text=p.suffix in ['.html','.js','.json','.svg','.xml']
   if p.suffix=='.js':kind='application/javascript'
+  if p.name=='feed.xml':kind='application/rss+xml'
   if text and kind!='image/svg+xml':kind+='; charset=utf-8'
   item={'type':kind,'digest':hashlib.sha256(raw).hexdigest(),'encoding':'utf8' if text else 'base64','body':raw.decode() if text else base64.b64encode(raw).decode()}
   if policy:item['policy']=policy+"; frame-ancestors 'none'"
@@ -32,7 +33,7 @@ def build():
   parser=Resources();parser.feed(p.read_text())
   if not parser.policy:raise ValueError('Missing prevalidated CSP: '+str(p))
   resources.update(parser.urls);add(p,parser.policy)
- for name in ['app.js','article.js','search-index.json','favicon.svg']:add(ROOT/name)
+ for name in ['app.js','article.js','search-index.json','favicon.svg','feed.xml']:add(ROOT/name)
  for name in sorted(resources):add(ROOT/name.lstrip('/'))
  original=[]
  for p in sorted((ROOT/'assets').rglob('*')):

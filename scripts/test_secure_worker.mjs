@@ -9,7 +9,7 @@ function protectedResponse(response){
  assert.equal(response.headers.get('x-content-type-options'),'nosniff');
  assert.equal(response.headers.get('referrer-policy'),'no-referrer');count++;
 }
-for(const path of ['/','/index.html','/lite.html','/posts/garden-origin.html','/favicon.svg','/search-index.json']){
+for(const path of ['/','/index.html','/lite.html','/posts/garden-origin.html','/favicon.svg','/search-index.json','/feed.xml']){
  const response=await call(path);assert.equal(response.status,200);protectedResponse(response);
 }
 for(const path of ['/content.json','/scripts/check_site_security.py','/.env','/.git/config','/assets/../content.json','/%2fcontent.json']){

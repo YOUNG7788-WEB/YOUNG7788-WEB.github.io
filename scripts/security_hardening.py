@@ -31,7 +31,7 @@ def harden_page(html):
 
 def harden(out):
     out=Path(out);manifest=json.loads((out/'publish-manifest.json').read_text())
-    missing='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>页面未找到 · Young 的数字花园</title><style>body{font:16px/1.8 system-ui,sans-serif;background:#fafaf7;color:#141612;max-width:650px;margin:15vh auto;padding:24px}h1{font-size:64px;line-height:1}a{color:inherit;text-underline-offset:5px}</style></head><body><main><h1>404</h1><p>这条小路还没有种下内容。</p><p><a href="/index.html">回到数字花园 →</a> · <a href="/lite.html">省流阅读</a></p></main></body></html>'''
+    missing='''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>页面未找到 · Young 的数字花园</title><style>body{font:16px/1.8 system-ui,sans-serif;background:#f6f4ed;color:#29352e;max-width:650px;margin:15vh auto;padding:24px}h1{font-size:64px;line-height:1}a{color:inherit;text-underline-offset:5px}</style></head><body><main><h1>404</h1><p>这条小路还没有种下内容。</p><p><a href="/index.html">回到数字花园 →</a> · <a href="/lite.html">省流阅读</a></p></main></body></html>'''
     (out/'404.html').write_text(missing,encoding='utf-8')
     if '404.html' not in manifest:manifest.append('404.html')
     (out/'publish-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False))
