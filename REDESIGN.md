@@ -1,14 +1,14 @@
-# Young 数字花园 · 改版与性能优化
+# Young 的手记 · 当前改版
 
 正式公开入口：https://young7788-web.github.io/
-独立私人预览：https://young.zzm77088.chatgpt.site/
+私人版本：https://young.zzm77088.chatgpt.site/
 
-以 woyun.me 的大字排版、留白和项目预览为参考，使用 Young 自己的资料与封面；保留 19 篇独立文章与旧文章链接。所有文字直接存在 HTML 内；无需 JavaScript 或第三方接口即可阅读。
+当前采用已确认的纸张色、墨绿、陶土色与自绘工作台插画，围绕个人介绍、项目过程、手记、电路小实验、近期关注和联系方式组织。设计依据为司徒K《什么是好的个人网站，30个优质网站精选》，详见 `DESIGN.md`。
 
-构建：`python scripts/build_site.py --data content.json --source-root . --output staging`。将 staging/publish-manifest.json 清单文件复制回仓库，并保留原 assets/。不上传 staging/、dist/、original/ 或 .openai/ 到原 GitHub 网站。
+首页、19 篇文章、省流目录和旧文章入口采用同一版视觉与导航。全部原文、独立封面、高清资产和旧链接保留；使用系统字体与原生 JavaScript，无外部字体或脚本 CDN。
 
-首页源：scripts/editorial_home.py、scripts/editorial.css、scripts/editorial.js。正文与分类：content.json。正文样式与交互：scripts/site.css、scripts/site.js。响应式封面生成与体积报告：scripts/optimize_delivery.py。
+统一更新命令为 `python scripts/sync_site.py`；它生成全部页面、安全策略和 Worker 部署输出。`python scripts/sync_site.py --check` 检查源码、生成页面和 Worker 是否一致。源码入口与部署边界见 `README.md`，安全边界见 `SECURITY.md`。
 
-优化：系统字体、无第三方运行时依赖；非首屏图片懒加载；文章封面按尺寸加载 WebP；省流阅读；弱网/省流模式关闭入场与循环动画；不可见页面暂停循环动画。原始高清封面保持不变。
+这版已替换旧首页生成逻辑和旧版说明。历史提交与审计快照仅作为历史记录，不参与当前构建或部署。
 
-GitHub Pages 的公开入口不需要 ChatGPT 登录。私人预览仍保持原有访问权限。大陆测速服务在提交目标后要求人机验证，尚未取得本网站大陆节点结果；海外 HTTP 成功不能证明大陆可达。Sites 指定的浏览器 QA 工具未提供，未进行新版浏览器交互实测。
+境外 HTTP 检查与体积报告不代表大陆节点测速结果。浏览器预览和交互验证的范围以实际记录为准。

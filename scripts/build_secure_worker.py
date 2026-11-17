@@ -17,7 +17,8 @@ class Resources(HTMLParser):
    value=entry.strip().split()
    if value and value[0].startswith('/assets/'):self.urls.add(value[0])
 
-def build():
+def build(output_root=ROOT):
+ output_root=Path(output_root)
  public=[ROOT/'index.html',ROOT/'lite.html',ROOT/'article.html',ROOT/'404.html',*sorted((ROOT/'posts').glob('*.html'))]
  resources=set();assets={}
  def add(p,policy=None):
@@ -42,13 +43,14 @@ def build():
   if name not in assets and p.suffix in ['.webp','.png','.jpg','.jpeg','.gif','.json']:original.append(name)
  runtime=(ROOT/'worker/runtime.mjs').read_text()
  code=runtime+'\nconst publicAssets='+json.dumps(assets,ensure_ascii=False,separators=(',',':'))+';\nconst legacyAssets='+json.dumps(original,separators=(',',':'))+';\nexport default createWorker(publicAssets,legacyAssets);\n'
- (ROOT/'worker/index.js').write_text(code,encoding='utf-8')
+ (output_root/'worker').mkdir(parents=True,exist_ok=True)
+ (output_root/'worker/index.js').write_text(code,encoding='utf-8')
  # Keep static sources and artwork intact. Only replace generated deployment output.
- dist=ROOT/'dist'
+ dist=output_root/'dist'
  if dist.exists():shutil.rmtree(dist)
  (dist/'server').mkdir(parents=True);(dist/'server/index.js').write_text(code,encoding='utf-8')
  report={'bundled_runtime_files':len(assets),'original_artwork_fallbacks':len(original),'worker_bytes':len(code.encode()),'worker_gzip_bytes':len(gzip.compress(code.encode())),'contains_authoring_json':'/content.json' in assets}
- (ROOT/'worker/build-report.json').write_text(json.dumps(report,indent=2)+'\n')
+ (output_root/'worker/build-report.json').write_text(json.dumps(report,indent=2)+'\n')
  print(json.dumps(report))
  return report
 if __name__=='__main__':build()

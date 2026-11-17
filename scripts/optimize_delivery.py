@@ -5,8 +5,8 @@ from io import BytesIO
 import gzip,hashlib,json,re
 from html import escape
 
-def optimize(data,out):
- root=Path(__file__).resolve().parent.parent
+def optimize(data,out,source_root=None):
+ root=Path(source_root) if source_root is not None else Path(__file__).resolve().parent.parent
  budget=json.loads((out/'performance-budget.json').read_text())
  manifest=json.loads((out/'publish-manifest.json').read_text())
  reports={}
@@ -32,10 +32,6 @@ def optimize(data,out):
   path=out/'posts'/f'{i["id"]}.html';text=path.read_text()
   tag=f'<img class="article-art" src="/{thumb.relative_to(out)}" srcset="/{thumb.relative_to(out)} 480w, /{name} {image.width}w" sizes="100vw" width="{image.width}" height="{image.height}" alt="" decoding="async" fetchpriority="low">'
   text=re.sub(r'<img class="article-art"[^>]*>',lambda _:tag,text)
-  # A direct text-mode entry is available before any decorative image.
-  text=text.replace('<a class="back" href="/index.html#collection">','<a class="back" href="/index.html#writing">')
-  text=text.replace('<a href="/index.html#explore">七个栏目</a>','<a href="/lite.html">省流阅读</a>')
-  text=text.replace('/index.html#collection','/index.html#writing').replace('/index.html#explore','/index.html#writing')
   related=[j for j in data['items'] if j.get('status')=='published' and not j.get('placeholder') and j['id']!=i['id'] and j['category']==i['category']][:2]
   if not related:related=[j for j in data['items'] if j.get('status')=='published' and not j.get('placeholder') and j['id']!=i['id'] and j['category']!='contact'][:2]
   cards=''.join('<a href="/posts/'+j['id']+'.html"><small>继续沿着这条小路</small><h3>'+escape(j['title']['zh'])+'</h3><span>读下一篇 ↗</span></a>' for j in related)
@@ -45,8 +41,6 @@ def optimize(data,out):
   reports[i['id']]={'original_bytes':source.stat().st_size,'responsive_960_bytes':len(raw),'responsive_width':image.width,'mobile_480_bytes':thumb.stat().st_size}
   budget['article_html_bytes'][i['id']]=len(text.encode())
  html=(out/'index.html').read_text()
- # Work and archive artwork is authored with native lazy loading.
- (out/'index.html').write_text(html)
  budget.update(homepage_required_html_bytes=len(html.encode()),homepage_gzip_bytes_for_comparison=len(gzip.compress(html.encode())),responsive_covers=reports,external_runtime_dependencies=0,homepage_eager_images=0,delivery_notes=['HTML contains all article titles and summaries; article bodies are static HTML.','System fonts; no Google Fonts, external script CDN, analytics or third-party API.','Work artwork lazy-loaded; archive artwork lazy-loaded and hidden in list mode.','Article covers use 480w/960w same-origin WebP; original art files are preserved.','No mainland availability assertion without actual mainland-node evidence.'])
  (out/'performance-budget.json').write_text(json.dumps(budget,ensure_ascii=False,indent=2)+'\n')
  (out/'publish-manifest.json').write_text(json.dumps(list(dict.fromkeys(manifest)),ensure_ascii=False))
