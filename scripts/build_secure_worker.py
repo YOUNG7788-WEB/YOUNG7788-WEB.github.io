@@ -10,7 +10,7 @@ class Resources(HTMLParser):
  def handle_starttag(self,t,attrs):
   a=dict(attrs)
   if t=='meta' and a.get('http-equiv','').lower()=='content-security-policy':self.policy=a['content']
-  for key in ['src','data-image']:
+  for key in ['src','data-image','data-image-en']:
    value=a.get(key,'')
    if value.startswith('/assets/'):self.urls.add(value)
   for entry in a.get('srcset','').split(','):

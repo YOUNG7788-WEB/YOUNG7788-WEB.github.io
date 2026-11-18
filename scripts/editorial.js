@@ -8,6 +8,10 @@ function circuitValues(voltage,resistance){const u=Number(voltage),r=Number(resi
    link.setAttribute('href',(lang==='en'?'/en':'')+path.replace(/^\/en\//,'/'));
   }
  });
+ $$('img[data-image-en]').forEach(cover=>{
+  const src=lang==='en'?cover.dataset.imageEn:cover.dataset.imageZh;
+  if(cover.getAttribute('src')!==src)cover.setAttribute('src',src);
+ });
  $('#language').textContent=lang==='zh'?'EN / 中':'中 / EN';
  search.placeholder=lang==='zh'?'找一篇手记，或一个你也好奇的问题…':'Find a note or a shared curiosity…';
  search.setAttribute('aria-label',lang==='zh'?'搜索手记':'Search notes');

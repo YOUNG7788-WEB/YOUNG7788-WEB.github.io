@@ -131,18 +131,30 @@ def render_article(item, language):
     if not toc_links:
         toc_links = f'<a href="#body">{label("从头读起", "Start reading")}</a>'
     art = covers['article-' + item['id']]
+    if english:
+        cover_path = f'assets/covers-en/{item["id"]}.webp'
+        if not (source / cover_path).is_file():
+            raise ValueError('Missing English cover: ' + cover_path)
+        art_url = '/' + cover_path
+        preview = ''
+        width, height = 768, 512
+    else:
+        cover_path = item['image']
+        art_url = art['thumb']
+        preview = f' style="--preview:url({art["tiny"]})"'
+        width, height = 1200, 800
     category = next(c[language] for c in cats if c['id'] == item['category'])
     minutes = max(1, (len(text.split()) + 219) // 220 if english else (len(text) + 449) // 450)
     duration = label(f'约 {minutes} 分钟', f'{minutes} min read')
     switch = '<a href="/' + alternate + '" lang="' + label('en', 'zh-CN') + '">' + label('English', '中文') + '</a>'
-    html = head(title + ' · ' + brand, summary, path, alternate, lang, art['thumb']) + f"""
+    html = head(title + ' · ' + brand, summary, path, alternate, lang, art_url) + f"""
 <body class="article-page"><a class="skip" href="#body">{label('跳到正文', 'Skip to article')}</a>
 <div class="shell"><header class="topbar article-header"><a class="brand" href="{home}"><b>✳</b> {brand}</a>
 <nav class="main-nav" aria-label="{label('主导航', 'Main navigation')}">
 <a href="{home}#writing">{label('所有手记', 'All notes')}</a><a href="/{prefix}lite.html">{label('省流阅读', 'Text-only')}</a>{switch}
 </nav></header></div>
-<main id="main"><section class="article-cover" style="--preview:url({art['tiny']})">
-<img class="article-art" src="/{escape(item['image'])}" width="1200" height="800" alt="" decoding="async" fetchpriority="low">
+<main id="main"><section class="article-cover"{preview}>
+<img class="article-art" src="/{escape(cover_path)}" width="{width}" height="{height}" alt="" decoding="async" fetchpriority="low">
 <div class="shell"><div class="article-cover-inner">
 <a class="back" href="{home}#writing">{label('← 回到手记', '← Back to notes')}</a>
 <p class="article-category">{escape(category)}</p><h1>{escape(title)}</h1>

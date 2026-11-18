@@ -56,8 +56,8 @@
     "article-contact-me": 16610
   },
   "notes": "Byte counts are not a mainland speed measurement. All article text is present in HTML; search index is fetched only on search intent. Full-size art is used on article pages.",
-  "homepage_required_html_bytes": 80795,
-  "homepage_gzip_bytes_for_comparison": 21487,
+  "homepage_required_html_bytes": 83808,
+  "homepage_gzip_bytes_for_comparison": 21841,
   "responsive_covers": {
     "a-share-quant-research": {
       "original_bytes": 184506,

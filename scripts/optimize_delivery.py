@@ -34,7 +34,8 @@ def optimize(data,out,source_root=None):
   if not related:related=[j for j in data['items'] if j.get('status')=='published' and not j.get('placeholder') and j['id']!=i['id'] and j['category']!='contact'][:2]
   for language, prefix in [('zh', '/'), ('en', '/en/')]:
    path=out/prefix.lstrip('/')/'posts'/f'{i["id"]}.html'
-   text=re.sub(r'<img class="article-art"[^>]*>',lambda _:tag,path.read_text())
+   text=path.read_text()
+   if language=='zh':text=re.sub(r'<img class="article-art"[^>]*>',lambda _:tag,text)
    heading='Keep reading' if language=='en' else '再翻两页'
    action='Read next ↗' if language=='en' else '读下一篇 ↗'
    cards=''.join(f'<a href="{prefix}posts/{j["id"]}.html"><h3>{escape(j["title"][language])}</h3><span>{action}</span></a>' for j in related)
