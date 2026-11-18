@@ -29,17 +29,19 @@ def optimize(data,out,source_root=None):
   name=f'assets/optimized/{i["id"]}-960-{hashlib.sha256(raw).hexdigest()[:10]}.webp'
   dest=out/name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(raw);manifest.append(name)
   thumb=next((out/'assets/thumbs').glob('article-'+i['id']+'-*.webp'))
-  path=out/'posts'/f'{i["id"]}.html';text=path.read_text()
   tag=f'<img class="article-art" src="/{thumb.relative_to(out)}" srcset="/{thumb.relative_to(out)} 480w, /{name} {image.width}w" sizes="100vw" width="{image.width}" height="{image.height}" alt="" decoding="async" fetchpriority="low">'
-  text=re.sub(r'<img class="article-art"[^>]*>',lambda _:tag,text)
   related=[j for j in data['items'] if j.get('status')=='published' and not j.get('placeholder') and j['id']!=i['id'] and j['category']==i['category']][:2]
   if not related:related=[j for j in data['items'] if j.get('status')=='published' and not j.get('placeholder') and j['id']!=i['id'] and j['category']!='contact'][:2]
-  cards=''.join('<a href="/posts/'+j['id']+'.html"><small>继续沿着这条小路</small><h3>'+escape(j['title']['zh'])+'</h3><span>读下一篇 ↗</span></a>' for j in related)
-  section='<section class="shell related-notes" aria-label="继续阅读"><p>KEEP READING / 再翻两页</p><div class="related-grid">'+cards+'</div></section>'
-  text=text.replace('<div class="shell article-end">',section+'<div class="shell article-end">')
-  path.write_text(text)
+  for language, prefix in [('zh', '/'), ('en', '/en/')]:
+   path=out/prefix.lstrip('/')/'posts'/f'{i["id"]}.html'
+   text=re.sub(r'<img class="article-art"[^>]*>',lambda _:tag,path.read_text())
+   heading='Keep reading' if language=='en' else '再翻两页'
+   action='Read next ↗' if language=='en' else '读下一篇 ↗'
+   cards=''.join(f'<a href="{prefix}posts/{j["id"]}.html"><h3>{escape(j["title"][language])}</h3><span>{action}</span></a>' for j in related)
+   section=f'<section class="shell related-notes" aria-label="{heading}"><p>{heading}</p><div class="related-grid">{cards}</div></section>'
+   text=text.replace('<div class="shell article-end">',section+'<div class="shell article-end">')
+   path.write_text(text)
   reports[i['id']]={'original_bytes':source.stat().st_size,'responsive_960_bytes':len(raw),'responsive_width':image.width,'mobile_480_bytes':thumb.stat().st_size}
-  budget['article_html_bytes'][i['id']]=len(text.encode())
  html=(out/'index.html').read_text()
  budget.update(homepage_required_html_bytes=len(html.encode()),homepage_gzip_bytes_for_comparison=len(gzip.compress(html.encode())),responsive_covers=reports,external_runtime_dependencies=0,homepage_eager_images=0,delivery_notes=['HTML contains all article titles and summaries; article bodies are static HTML.','System fonts; no Google Fonts, external script CDN, analytics or third-party API.','Work artwork lazy-loaded; archive artwork lazy-loaded and hidden in list mode.','Article covers use 480w/960w same-origin WebP; original art files are preserved.','No mainland availability assertion without actual mainland-node evidence.'])
  (out/'performance-budget.json').write_text(json.dumps(budget,ensure_ascii=False,indent=2)+'\n')

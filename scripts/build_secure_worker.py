@@ -19,7 +19,7 @@ class Resources(HTMLParser):
 
 def build(output_root=ROOT):
  output_root=Path(output_root)
- public=[ROOT/'index.html',ROOT/'lite.html',ROOT/'article.html',ROOT/'404.html',*sorted((ROOT/'posts').glob('*.html'))]
+ public=[ROOT/'index.html',ROOT/'lite.html',ROOT/'article.html',ROOT/'404.html',*sorted((ROOT/'posts').glob('*.html')),ROOT/'en/lite.html',*sorted((ROOT/'en/posts').glob('*.html'))]
  resources=set();assets={}
  def add(p,policy=None):
   raw=p.read_bytes();name='/'+p.relative_to(ROOT).as_posix();kind=mimetypes.guess_type(name)[0] or 'application/octet-stream'

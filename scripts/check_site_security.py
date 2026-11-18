@@ -47,14 +47,15 @@ def page_errors(html):
  return errors
 
 def validate(root):
- root=Path(root);errors=[];pages=[*sorted(root.glob('*.html')),*sorted((root/'posts').glob('*.html'))]
+ root=Path(root);errors=[];pages=[*sorted(root.glob('*.html')),*sorted((root/'posts').glob('*.html')),*sorted((root/'en').rglob('*.html'))]
  for p in pages:
   if not p.is_file():errors.append(str(p)+': missing');continue
   errors.extend(str(p.relative_to(root))+': '+e for e in page_errors(p.read_text()))
  data=json.loads((root/'content.json').read_text())
  for i in data['items']:
   if i.get('status')!='published' or i.get('placeholder'):errors.append('Keep unpublished authoring content outside this public repository')
-  if not (root/'posts'/f'{i["id"]}.html').is_file():errors.append('Missing published article '+i['id'])
+  for prefix in ('posts','en/posts'):
+   if not (root/prefix/f'{i["id"]}.html').is_file():errors.append('Missing published article '+prefix+'/'+i['id'])
  if (root/'.nojekyll').exists():errors.append('.nojekyll would bypass source-file exclusions')
  config=(root/'_config.yml').read_text()
  for name in ['content.json','scripts','README.md','AGENTS.md','SECURITY.md','DESIGN.md','performance-budget.json']:

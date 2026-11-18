@@ -3,29 +3,29 @@
   "content_latest_date": "2026-11-14",
   "articles": 19,
   "unique_covers": 26,
-  "lite_index_html_bytes": 9774,
+  "lite_index_html_bytes": 9826,
   "homepage_blocking_external_files": 0,
   "previous_required_files_uncompressed_bytes": 0,
   "article_html_bytes": {
-    "a-share-quant-research": 25925,
-    "garden-origin": 15813,
-    "x-notes": 15789,
-    "my-path": 15221,
-    "night-talk": 17078,
-    "engineering-study": 15707,
-    "study-rhythm": 15734,
-    "vps-review": 28680,
-    "touchpad-review": 16046,
-    "system-maintenance": 15930,
-    "ai-workflow": 16100,
-    "website-build": 16188,
-    "briefing-process": 16498,
-    "parallel-universe": 16067,
-    "night-video": 15937,
-    "creative-reading": 15881,
-    "network-life": 15195,
-    "f1-business": 17731,
-    "contact-me": 14563
+    "a-share-quant-research": 26187,
+    "garden-origin": 16048,
+    "x-notes": 16006,
+    "my-path": 15438,
+    "night-talk": 17304,
+    "engineering-study": 15993,
+    "study-rhythm": 16005,
+    "vps-review": 28906,
+    "touchpad-review": 16287,
+    "system-maintenance": 16180,
+    "ai-workflow": 16329,
+    "website-build": 16423,
+    "briefing-process": 16742,
+    "parallel-universe": 16314,
+    "night-video": 16166,
+    "creative-reading": 16125,
+    "network-life": 15466,
+    "f1-business": 17999,
+    "contact-me": 14789
   },
   "thumbnail_bytes": {
     "category-personal": 16012,
@@ -56,8 +56,8 @@
     "article-contact-me": 16610
   },
   "notes": "Byte counts are not a mainland speed measurement. All article text is present in HTML; search index is fetched only on search intent. Full-size art is used on article pages.",
-  "homepage_required_html_bytes": 80846,
-  "homepage_gzip_bytes_for_comparison": 21180,
+  "homepage_required_html_bytes": 80795,
+  "homepage_gzip_bytes_for_comparison": 21487,
   "responsive_covers": {
     "a-share-quant-research": {
       "original_bytes": 184506,
@@ -183,5 +183,5 @@
     "Article covers use 480w/960w same-origin WebP; original art files are preserved.",
     "No mainland availability assertion without actual mainland-node evidence."
   ],
-  "csp_protected_pages": 23
+  "csp_protected_pages": 43
 }
