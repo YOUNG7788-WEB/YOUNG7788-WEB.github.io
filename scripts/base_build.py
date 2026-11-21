@@ -79,6 +79,18 @@ def markdown(text, copy_label):
             continue
         if code is not None: code.append(raw);continue
         if not line: flush();continue
+        figure = re.fullmatch(r"!\[([^\]]+)\]\((/assets/articles/[a-z0-9_/-]+\.webp)\)", line)
+        if figure:
+            flush()
+            alt, src = figure.groups()
+            with Image.open(source / src.lstrip("/")) as image:
+                width, height = image.size
+            html.append(
+                '<figure style="margin:1.5rem 0 2rem">'
+                f'<img src="{escape(src)}" width="{width}" height="{height}" alt="{escape(alt)}" '
+                'loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:12px"></figure>'
+            )
+            continue
         heading=re.match(r'^\*\*(.+?)\*\*\s*(.*)$',line)
         if heading:
             flush();ident='section-'+str(len(headings));headings.append((ident,heading[1]));html.append('<h2 id="'+ident+'">'+inline(heading[1])+'</h2>')
